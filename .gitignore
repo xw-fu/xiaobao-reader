@@ -7,5 +7,5 @@ dist/
 node_modules/
 temp/
 *.tsbuildinfo
-*.d.ts
-*.js
+vite.config.js
+vite.config.d.ts
