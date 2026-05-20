@@ -1,0 +1,12 @@
+.footer {
+  border-top: 1px solid var(--border);
+  margin-top: 64px;
+}
+.inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  color: var(--text-muted);
+}
