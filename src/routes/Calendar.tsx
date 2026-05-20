@@ -1,3 +1,8 @@
+import { useManifest } from "../data/ManifestContext";
+import { CalendarGrid } from "../components/CalendarGrid";
+
 export default function Calendar() {
-  return <div style={{ padding: 24 }}>Calendar (placeholder)</div>;
+  const { status } = useManifest();
+  if (status.kind !== "ready") return null;
+  return <CalendarGrid entries={status.manifest.entries} />;
 }
