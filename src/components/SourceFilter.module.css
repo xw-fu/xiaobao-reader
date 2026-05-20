@@ -1,0 +1,22 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 16px;
+  font-size: .8rem;
+}
+.chip {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  border-radius: 100px;
+  padding: 3px 10px;
+  cursor: pointer;
+  font: inherit;
+}
+.chip.active {
+  background: var(--accent-light);
+  border-color: #fde68a;
+  color: var(--accent-dark);
+  font-weight: 600;
+}
