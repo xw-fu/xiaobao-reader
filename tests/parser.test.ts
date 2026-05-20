@@ -101,3 +101,38 @@ describe("parseManifestEntry", () => {
     });
   });
 });
+
+function loadFixture(name: string): string {
+  return readFileSync(resolve(__dirname, "fixtures", name), "utf8");
+}
+
+describe("parseReport - edge cases", () => {
+  it("recognizes 晚报 as evening edition", () => {
+    const r = parseReport(loadFixture("evening.md"), "/reports/2026/05/19-evening.md");
+    expect(r.meta.edition).toBe("evening");
+  });
+
+  it("preserves raw inline markdown in what/soWhat (rendering is downstream)", () => {
+    const r = parseReport(loadFixture("inline-markdown.md"), "/reports/2026/05/20-morning.md");
+    const item = r.sections[0].items[0];
+    expect(item.what).toBe("这里是 **加粗** 文本与 [链接](https://example.com)。");
+    expect(item.soWhat).toBe("还有 *斜体* 内容。");
+  });
+
+  it("allows a section with zero items", () => {
+    const r = parseReport(loadFixture("empty-section.md"), "/reports/2026/05/21-morning.md");
+    expect(r.sections.map((s) => s.title)).toEqual(["空板块", "另一板块"]);
+    expect(r.sections[0].items).toEqual([]);
+    expect(r.sections[1].items).toHaveLength(1);
+  });
+
+  it("throws ReportParseError with region='takeaway' when 今日要点 is missing", () => {
+    expect(() => parseReport(loadFixture("missing-section.md"), "/r/x.md"))
+      .toThrowError(/takeaway/);
+  });
+
+  it("throws ReportParseError pointing at the bad funnel cell", () => {
+    expect(() => parseReport(loadFixture("malformed-funnel.md"), "/r/x.md"))
+      .toThrowError(/funnel\.bucket/);
+  });
+});
