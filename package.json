@@ -7,7 +7,7 @@
     "predev": "tsx scripts/build-index.ts",
     "dev": "vite",
     "prebuild": "tsx scripts/build-index.ts",
-    "build": "tsc -b && vite build",
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig.node.json && vite build",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
