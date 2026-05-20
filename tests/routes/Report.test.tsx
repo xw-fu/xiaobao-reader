@@ -1,6 +1,5 @@
 import { describe, it, expect, beforeEach } from "vitest";
 import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import { MemoryRouter, Routes, Route } from "react-router-dom";
 import { http, HttpResponse } from "msw";
 import { readFileSync } from "node:fs";
@@ -9,7 +8,6 @@ import { server } from "../setup";
 import { ManifestProvider } from "../../src/data/ManifestContext";
 import { _clearCache } from "../../src/data/report";
 import App from "../../src/App";
-import Calendar from "../../src/routes/Calendar";
 import Report from "../../src/routes/Report";
 
 const golden = readFileSync(resolve(__dirname, "../fixtures/golden.md"), "utf8");
@@ -25,24 +23,15 @@ const MANIFEST = {
       path: "/reports/2026/05/19-morning.md",
       sourceCount: 7,
     },
-    {
-      date: "2026-05-15",
-      edition: "morning",
-      title: "晓报 · 早报 — 2026-05-15",
-      takeaway: "另一日",
-      path: "/reports/2026/05/15-morning.md",
-      sourceCount: 3,
-    },
   ],
 };
 
-function renderApp(initialPath = "/") {
+function renderAt(path: string) {
   return render(
-    <MemoryRouter initialEntries={[initialPath]}>
+    <MemoryRouter initialEntries={[path]}>
       <ManifestProvider>
         <Routes>
           <Route element={<App />}>
-            <Route index element={<Calendar />} />
             <Route path="/r/:date" element={<Report />} />
             <Route path="/r/:date/:edition" element={<Report />} />
           </Route>
@@ -57,20 +46,26 @@ beforeEach(() => {
   server.use(http.get("/reports/index.json", () => HttpResponse.json(MANIFEST)));
 });
 
-describe("Calendar route", () => {
-  it("highlights days that have reports", async () => {
-    renderApp("/");
-    expect(await screen.findByRole("button", { name: /2026年5月19日/ })).toHaveClass(/has/i);
-    expect(screen.getByRole("button", { name: /2026年5月15日/ })).toHaveClass(/has/i);
-    expect(screen.queryByRole("button", { name: /2026年5月10日/ })).not.toBeInTheDocument();
+describe("Report route", () => {
+  it("fetches and renders the report markdown", async () => {
+    server.use(http.get("/reports/2026/05/19-morning.md", () => HttpResponse.text(golden)));
+    renderAt("/r/2026-05-19");
+    expect(await screen.findByText("晓报 · 早报 — 2026-05-19")).toBeInTheDocument();
+    expect(await screen.findByText(/AI 前沿/)).toBeInTheDocument();
+    const matches = screen.getAllByText("The AI trial of the century ends with a whimper");
+    expect(matches.length).toBeGreaterThan(0);
   });
 
-  it("navigates to /r/:date when a highlighted day is clicked", async () => {
-    server.use(http.get("/reports/2026/05/19-morning.md", () => HttpResponse.text(golden)));
-    const user = userEvent.setup();
-    renderApp("/");
-    const cell = await screen.findByRole("button", { name: /2026年5月19日/ });
-    await user.click(cell);
-    expect(await screen.findByText("晓报 · 早报 — 2026-05-19")).toBeInTheDocument();
+  it("shows '找不到这份报告' when the manifest has no entry for that date", async () => {
+    renderAt("/r/2099-01-01");
+    expect(await screen.findByText(/找不到这份报告/)).toBeInTheDocument();
+  });
+
+  it("shows an inline error when the markdown fetch fails with 404", async () => {
+    server.use(
+      http.get("/reports/2026/05/19-morning.md", () => new HttpResponse(null, { status: 404 })),
+    );
+    renderAt("/r/2026-05-19");
+    expect(await screen.findByText(/找不到这份报告/)).toBeInTheDocument();
   });
 });
