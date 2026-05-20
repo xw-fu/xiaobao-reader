@@ -36,16 +36,45 @@ function parseHeader(lines: string[]): { title: string; date: string; edition: E
   return { title, date, edition };
 }
 
+// Returns the line index where content sections begin (after the takeaway preamble).
+// Two formats are supported:
+//   A) preamble (one or more ## blocks) → "---" → content sections
+//   B) single ## takeaway block, no --- separator → content starts at second ##
+//
+// Format A is detected by finding a "---" that has a "##" after it (before the funnel).
+// When both formats could apply, A takes precedence because an explicit separator is authoritative.
+function contentStartIndex(lines: string[]): number {
+  const firstH2 = findLineIndex(lines, (l) => l.startsWith("## "));
+  if (firstH2 === -1) return lines.length;
+
+  // Scan for a --- that is followed by a ## (i.e., it's a preamble/content boundary).
+  for (let i = firstH2 + 1; i < lines.length; i++) {
+    if (lines[i].includes(FUNNEL_MARKER)) break;
+    if (lines[i].trim() !== "---") continue;
+    // Found a ---; check if a ## follows it.
+    const nextH2 = findLineIndex(lines, (l) => l.startsWith("## "), i + 1);
+    if (nextH2 !== -1) return i + 1; // Format A: content starts after this ---
+  }
+
+  // Format B: content starts at the second ## heading.
+  const secondH2 = findLineIndex(lines, (l) => l.startsWith("## "), firstH2 + 1);
+  return secondH2 === -1 ? lines.length : secondH2;
+}
+
 function parseTakeaway(lines: string[]): string {
-  const startIdx = findLineIndex(lines, (l) => l.trim() === "## 今日要点");
-  if (startIdx === -1) throw new ReportParseError("takeaway", 1, "missing ## 今日要点");
+  // Collect all text from the first ## heading up to the content boundary.
+  // Multiple sub-headings before the boundary (e.g. 今日亮点 + 明日关注) are all takeaway.
+  const firstH2 = findLineIndex(lines, (l) => l.startsWith("## "));
+  if (firstH2 === -1) throw new ReportParseError("takeaway", 1, "missing takeaway section (no ## heading found)");
+  const endIdx = contentStartIndex(lines);
   const collected: string[] = [];
-  for (let i = startIdx + 1; i < lines.length; i++) {
+  for (let i = firstH2 + 1; i < endIdx; i++) {
     const l = lines[i];
-    if (l.startsWith("## ") || l.trim() === "---") break;
+    if (l.includes(FUNNEL_MARKER)) break;
+    if (l.startsWith("## ") || l.trim() === "---") continue; // skip boundary markers
     if (l.trim()) collected.push(l.trim());
   }
-  if (collected.length === 0) throw new ReportParseError("takeaway", startIdx + 1, "empty takeaway");
+  if (collected.length === 0) throw new ReportParseError("takeaway", firstH2 + 1, "empty takeaway");
   return collected.join(" ").trim();
 }
 
@@ -55,13 +84,7 @@ function isSectionBoundary(line: string): boolean {
 
 function parseSections(lines: string[]): ReportSection[] {
   const sections: ReportSection[] = [];
-  const takeawayIdx = findLineIndex(lines, (l) => l.trim() === "## 今日要点");
-  let i = takeawayIdx + 1;
-  // skip until the first section that's NOT 今日要点
-  while (i < lines.length && !(lines[i].startsWith("## ") && lines[i].trim() !== "## 今日要点")) {
-    if (lines[i].includes(FUNNEL_MARKER)) return sections;
-    i++;
-  }
+  let i = contentStartIndex(lines);
   while (i < lines.length) {
     if (lines[i].includes(FUNNEL_MARKER)) break;
     if (!lines[i].startsWith("## ")) { i++; continue; }

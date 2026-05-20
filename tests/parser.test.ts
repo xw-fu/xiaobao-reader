@@ -126,9 +126,17 @@ describe("parseReport - edge cases", () => {
     expect(r.sections[1].items).toHaveLength(1);
   });
 
-  it("throws ReportParseError with region='takeaway' when 今日要点 is missing", () => {
+  it("throws ReportParseError with region='takeaway' when no ## heading exists", () => {
     expect(() => parseReport(loadFixture("missing-section.md"), "/r/x.md"))
       .toThrowError(/takeaway/);
+  });
+
+  it("accepts alternate takeaway headings like 今日亮点 / 明日关注", () => {
+    const r = parseReport(loadFixture("alt-takeaway-headings.md"), "/reports/2026/05/20-evening.md");
+    expect(r.meta.edition).toBe("evening");
+    expect(r.takeaway).toContain("首要亮点内容");
+    expect(r.takeaway).toContain("明日展望内容");
+    expect(r.sections.map((s) => s.title)).toEqual(["AI 前沿"]);
   });
 
   it("throws ReportParseError pointing at the bad funnel cell", () => {
