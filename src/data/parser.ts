@@ -190,8 +190,9 @@ export function parseReport(source: string, path: string): Report {
 }
 
 /**
- * Lightweight parser for build-index.ts — extracts only the manifest fields,
- * stopping before items/funnel/footer to keep startup fast.
+ * Lightweight parser for build-index.ts — extracts manifest fields. Section
+ * structure (and item count) is parsed for sourceCount, but funnel/footer
+ * parsing is skipped.
  */
 export function parseManifestEntry(source: string, path: string): ManifestEntry {
   const lines = splitLines(source);
