@@ -1,6 +1,22 @@
 {
-  "generatedAt": "2026-05-20T13:34:57.908Z",
+  "generatedAt": "2026-05-20T14:38:26.287Z",
   "entries": [
+    {
+      "date": "2026-05-20",
+      "edition": "evening",
+      "title": "晓报 · 晚报 — 2026-05-20",
+      "takeaway": "Claude Code 发布 v2.1.145 版本，新增 --json 参数支持脚本化获取实时会话信息，同时为 OTEL 追踪添加 agent_id 和 parent_agent_id 属性，修复了后台子代理 span 的嵌套层级关系。llm-gemini 插件发布 0.32 版本，新增对 Gemini 3.5 Flash 模型的支持。",
+      "path": "/reports/2026/05/20-evening.md",
+      "sourceCount": 7
+    },
+    {
+      "date": "2026-05-20",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-05-20",
+      "takeaway": "Google在I/O大会上正式发布Gemini 3.5 Flash，移除-preview标签直接进入GA阶段，并宣布将其部署至旗下所有核心产品，覆盖全球数十亿用户。",
+      "path": "/reports/2026/05/20-morning.md",
+      "sourceCount": 3
+    },
     {
       "date": "2026-05-19",
       "edition": "morning",
