@@ -39,8 +39,6 @@ Deploy `dist/` to any static host (GitHub Pages, Vercel, Netlify). The `prebuild
 - **`src/data/report.ts`** — lazy-fetches and parses a single report, in-memory cached
 - **`scripts/build-index.ts`** — Node script that walks `public/reports/**/*.md` and writes `index.json`
 
-See [`docs/superpowers/specs/2026-05-19-xiaobao-reader-design.md`](docs/superpowers/specs/2026-05-19-xiaobao-reader-design.md) for the full design.
-
 ## Routes
 
 | Path | View |
