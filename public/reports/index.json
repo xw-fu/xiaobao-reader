@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-05-22T01:28:41.005Z",
+  "generatedAt": "2026-05-22T12:05:06.440Z",
   "entries": [
+    {
+      "date": "2026-05-22",
+      "edition": "evening",
+      "title": "晓报 · 晚报 — 2026-05-22",
+      "takeaway": "美国FTC对\"主动监听\"AI营销服务开罚，Cox Media Group等三家公司因虚假宣传数据采集功能被罚近百万美元。 李飞飞团队发布具身空间智能评测基准SpatialLM，该基准专注于评估AI模型在三维空间感知和交互理解方面的能力，可视为空间智能领域的\"ImageNet\"时刻。",
+      "path": "/reports/2026/05/22-evening.md",
+      "sourceCount": 6
+    },
     {
       "date": "2026-05-22",
       "edition": "morning",
