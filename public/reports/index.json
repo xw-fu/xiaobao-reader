@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-05-21T13:57:25.906Z",
+  "generatedAt": "2026-05-22T01:28:41.005Z",
   "entries": [
+    {
+      "date": "2026-05-22",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-05-22",
+      "takeaway": "Datasette-agent-charts 插件发布 0.1a2 版本，在渲染的图表下方新增了「View SQL query」按钮。",
+      "path": "/reports/2026/05/22-morning.md",
+      "sourceCount": 14
+    },
     {
       "date": "2026-05-21",
       "edition": "evening",
