@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-05-23T03:44:28.373Z",
+  "generatedAt": "2026-05-23T12:03:34.376Z",
   "entries": [
+    {
+      "date": "2026-05-23",
+      "edition": "evening",
+      "title": "晓报 · 晚报 — 2026-05-23",
+      "takeaway": "Anthropic发布Claude Code v2.1.150版本，主要为内部基础设施改进，没有面向用户的新功能。 昆仑万维方汉在AIGC2026大会上指出，AI时代经验不再是护城河，并列举了五类无法被AI替代的人群，同时建议企业采用\"做第二名最稳妥\"的竞争策略。",
+      "path": "/reports/2026/05/23-evening.md",
+      "sourceCount": 4
+    },
     {
       "date": "2026-05-23",
       "edition": "morning",
