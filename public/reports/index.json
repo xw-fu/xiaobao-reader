@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-05-22T12:05:06.440Z",
+  "generatedAt": "2026-05-23T03:44:28.373Z",
   "entries": [
+    {
+      "date": "2026-05-23",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-05-23",
+      "takeaway": "Anthropic 公司财务团队分享了如何利用 Claude 辅助财务分析、生成财务叙事报告的实践经验。",
+      "path": "/reports/2026/05/23-morning.md",
+      "sourceCount": 15
+    },
     {
       "date": "2026-05-22",
       "edition": "evening",
