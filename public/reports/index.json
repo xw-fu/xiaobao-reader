@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-05-23T12:03:34.376Z",
+  "generatedAt": "2026-05-24T01:27:25.623Z",
   "entries": [
+    {
+      "date": "2026-05-24",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-05-24",
+      "takeaway": "开发者博客介绍 HTML <dl> 元素的使用技巧：<dt> 术语定义后可跟随多个 <dd> 描述项，且可用 <div> 对术语和描述进行分组以方便样式控制。",
+      "path": "/reports/2026/05/24-morning.md",
+      "sourceCount": 3
+    },
     {
       "date": "2026-05-23",
       "edition": "evening",
