@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-05-24T12:03:30.275Z",
+  "generatedAt": "2026-05-25T01:27:32.850Z",
   "entries": [
+    {
+      "date": "2026-05-25",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-05-25",
+      "takeaway": "Datasette 发布 1.0a30 alpha 版本，新增可自定义的\"Jump to...\"菜单，通过新的 jump_item 插件钩子实现扩展功能。",
+      "path": "/reports/2026/05/25-morning.md",
+      "sourceCount": 6
+    },
     {
       "date": "2026-05-24",
       "edition": "evening",
