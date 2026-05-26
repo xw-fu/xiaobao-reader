@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-05-26T01:29:42.952Z",
+  "generatedAt": "2026-05-26T13:18:16.494Z",
   "entries": [
+    {
+      "date": "2026-05-26",
+      "edition": "evening",
+      "title": "晓报 · 晚报 — 2026-05-26",
+      "takeaway": "国内团队实现AI自主设计AI模型，训练效率较英伟达Megatron框架提升10%，创造全球首例完全由AI驱动的模型生成纪录。 谷歌DeepMind通过AI一次性破解9道埃尔德什猜想难题，其中部分悬而未决超过56年，引发数学界震动。",
+      "path": "/reports/2026/05/26-evening.md",
+      "sourceCount": 5
+    },
     {
       "date": "2026-05-26",
       "edition": "morning",
