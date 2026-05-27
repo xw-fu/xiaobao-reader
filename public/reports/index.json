@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-05-26T13:18:16.494Z",
+  "generatedAt": "2026-05-27T01:29:32.718Z",
   "entries": [
+    {
+      "date": "2026-05-27",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-05-27",
+      "takeaway": "Raymond Chen 解释了 C++/WinRT 与 C#、JavaScript 在处理 Windows Runtime 异步操作时的哲学差异：前者不支持对同一协程多次 await，因为 C++ 对象默认不可复制、重启协程会引发未定义行为，而后者语言可隐式克隆协程状态。",
+      "path": "/reports/2026/05/27-morning.md",
+      "sourceCount": 1
+    },
     {
       "date": "2026-05-26",
       "edition": "evening",
