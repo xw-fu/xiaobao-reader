@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-05-27T12:05:36.028Z",
+  "generatedAt": "2026-05-28T01:29:40.640Z",
   "entries": [
+    {
+      "date": "2026-05-28",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-05-28",
+      "takeaway": "SQLite 仓库新增 AGENTS.md 文件，为 AI 代理提供开发指引，明确不接受未事先协商或缺少法律文件的 Pull Request。",
+      "path": "/reports/2026/05/28-morning.md",
+      "sourceCount": 7
+    },
     {
       "date": "2026-05-27",
       "edition": "evening",
