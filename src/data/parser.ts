@@ -143,7 +143,10 @@ interface ParsedFunnel {
 
 function parseFunnel(lines: string[]): ParsedFunnel {
   const markerIdx = findLineIndex(lines, (l) => l.includes(FUNNEL_MARKER));
-  if (markerIdx === -1) throw new ReportParseError("funnel", 1, "missing **数据漏斗 · Funnel** marker");
+  if (markerIdx === -1) {
+    // Funnel section missing — return empty funnel rather than crashing the whole report.
+    return { collected: 0, rejected: 0, dedup: 0, governed: 0, final: 0, buckets: [] };
+  }
 
   // Totals line: first `- 收集：...` after the marker.
   let totalsIdx = -1;
@@ -151,7 +154,10 @@ function parseFunnel(lines: string[]): ParsedFunnel {
     if (FUNNEL_TOTALS_RE.test(lines[i])) { totalsIdx = i; break; }
     if (lines[i].startsWith("## ")) break;
   }
-  if (totalsIdx === -1) throw new ReportParseError("funnel.totals", markerIdx + 1, "missing 收集/过滤/去重/治理/最终 line");
+  if (totalsIdx === -1) {
+    // Funnel totals missing — return empty funnel rather than crashing.
+    return { collected: 0, rejected: 0, dedup: 0, governed: 0, final: 0, buckets: [] };
+  }
   const t = FUNNEL_TOTALS_RE.exec(lines[totalsIdx])!;
   const totals = {
     collected: +t[1], rejected: +t[2], dedup: +t[3], governed: +t[4], final: +t[5],
