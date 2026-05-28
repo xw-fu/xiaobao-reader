@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-05-28T01:29:40.640Z",
+  "generatedAt": "2026-05-28T12:07:20.184Z",
   "entries": [
+    {
+      "date": "2026-05-28",
+      "edition": "evening",
+      "title": "晓报 · 晚报 — 2026-05-28",
+      "takeaway": "技术博客John D Cook详细解析了Kullback-Leibler（K-L）散度为何不能被称为度量（metric），核心原因在于其非对称性。 Stratechery发布Eric Seufert专访，讨论生成式AI模型构建策略、Meta基础模型的战略价值，并从广告商业模式视角阐述对人类AI未来的乐观预期。",
+      "path": "/reports/2026/05/28-evening.md",
+      "sourceCount": 7
+    },
     {
       "date": "2026-05-28",
       "edition": "morning",
