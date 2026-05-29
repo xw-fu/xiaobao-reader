@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-05-28T12:07:20.184Z",
+  "generatedAt": "2026-05-29T01:52:46.843Z",
   "entries": [
+    {
+      "date": "2026-05-29",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-05-29",
+      "takeaway": "Claude Code 推出动态工作流功能，支持根据代码上下文和任务状态自动调整执行流程。",
+      "path": "/reports/2026/05/29-morning.md",
+      "sourceCount": 13
+    },
     {
       "date": "2026-05-28",
       "edition": "evening",
