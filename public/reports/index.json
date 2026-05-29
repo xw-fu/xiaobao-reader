@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-05-29T01:52:46.843Z",
+  "generatedAt": "2026-05-29T12:06:11.080Z",
   "entries": [
+    {
+      "date": "2026-05-29",
+      "edition": "evening",
+      "title": "晓报 · 晚报 — 2026-05-29",
+      "takeaway": "Datasette 1.0a31 版本发布，新增写查询执行和私有保存存储查询功能，用户可在获得权限后直接修改数据库并保存命名查询供后续使用。 OpenAI 推出 Rosalind Biodefense 项目，向通过审核的开发者和美国政府合作伙伴开放前沿 AI 模型 GPT-Rosalind，用于生物防御、公共卫生和疫情防范研究。",
+      "path": "/reports/2026/05/29-evening.md",
+      "sourceCount": 7
+    },
     {
       "date": "2026-05-29",
       "edition": "morning",
