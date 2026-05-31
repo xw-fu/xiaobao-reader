@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-05-31T01:27:57.684Z",
+  "generatedAt": "2026-05-31T12:06:56.230Z",
   "entries": [
+    {
+      "date": "2026-05-31",
+      "edition": "evening",
+      "title": "晓报 · 晚报 — 2026-05-31",
+      "takeaway": "Anthropic披露营收计算方式：按量付费收入以近28天为基准年化，订阅收入按月乘12年化两部分相加得出运行率收入。 复旦系团队发布机器人原生世界动作模型，采用首创的时空一体架构设计，并在半年内连续获得5轮融资。",
+      "path": "/reports/2026/05/31-evening.md",
+      "sourceCount": 6
+    },
     {
       "date": "2026-05-31",
       "edition": "morning",
