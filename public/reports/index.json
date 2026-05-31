@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-05-29T12:06:11.080Z",
+  "generatedAt": "2026-05-31T01:27:57.684Z",
   "entries": [
+    {
+      "date": "2026-05-31",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-05-31",
+      "takeaway": "研究者通过Pyodide和Service Worker实现Python ASGI应用直接在浏览器中运行，无需服务器端支持。",
+      "path": "/reports/2026/05/31-morning.md",
+      "sourceCount": 20
+    },
     {
       "date": "2026-05-29",
       "edition": "evening",
