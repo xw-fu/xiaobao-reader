@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-06-01T12:04:00.474Z",
+  "generatedAt": "2026-06-01T13:21:54.269Z",
   "entries": [
     {
       "date": "2026-06-01",
       "edition": "evening",
       "title": "晓报 · 晚报 — 2026-06-01",
-      "takeaway": "Subscribe by email Daring Fireball的知名播客节目「The Talk Show」在WWDC 2026期间进行现场直播，主持人John Gruber与开发者社区的重要人物进行了对话讨论。",
+      "takeaway": "数学博主John D Cook在博客中深入探讨了exp(-x²) ≈ (1 + cos(sin(x) + x))/2这一近似公式，指出虽然泰勒级数分析能解释部分原因，但并非全部——两边级数在x⁶项才首次出现差异，这只是近似效果好的表面解释。 持续关注高分资讯的后续发展。",
       "path": "/reports/2026/06/01-evening.md",
-      "sourceCount": 11
+      "sourceCount": 1
     },
     {
       "date": "2026-06-01",
