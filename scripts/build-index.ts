@@ -25,8 +25,11 @@ export function buildIndex(reportsDir: string): Manifest {
     try {
       entries.push(parseManifestEntry(source, path));
     } catch (err) {
+      // Skip malformed reports with a warning rather than aborting the whole
+      // index. A single "no ## heading" file (e.g. an empty-edition report)
+      // must not block publishing of all other reports.
       const reason = err instanceof Error ? err.message : String(err);
-      throw new Error(`failed to parse ${path}: ${reason}`);
+      console.warn(`[build-index] skipping ${path}: ${reason}`);
     }
   }
   // Sort: date desc, then evening before morning so evening lands first on same date.

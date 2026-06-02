@@ -35,6 +35,21 @@ describe("buildIndex", () => {
     ]);
   });
 
+  it("skips malformed markdown files with a warning instead of aborting the whole index", () => {
+    // Simulates the "no ## heading" case from 2026-06-01 evening report.
+    // buildIndex must not throw — it should log and continue so that other
+    // reports still get indexed.
+    const broken = "# 晓报 · 晚报 — 2026-06-01\n\n*晚安！*\n\n*今日暂无新闻更新。*\n";
+    writeFileSync(join(publicReports, "2026", "05", "broken.md"), broken);
+
+    const manifest = buildIndex(publicReports);
+    const paths = manifest.entries.map((e: { path: string }) => e.path);
+    expect(paths).toContain("/reports/2026/05/19-morning.md");
+    expect(paths).toContain("/reports/2026/05/19-evening.md");
+    expect(paths).not.toContain("/reports/2026/05/broken.md");
+    expect(manifest.entries).toHaveLength(2);
+  });
+
   it("entries include date, edition, title, takeaway, sourceCount", () => {
     buildIndex(publicReports);
     const manifest = JSON.parse(readFileSync(join(publicReports, "index.json"), "utf8"));
