@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-06-03T01:28:05.895Z",
+  "generatedAt": "2026-06-03T12:03:54.928Z",
   "entries": [
+    {
+      "date": "2026-06-03",
+      "edition": "evening",
+      "title": "晓报 · 晚报 — 2026-06-03",
+      "takeaway": "Snowflake在年度峰会Summit 26上宣布战略重心转向企业级AI应用落地，标志着AI竞争从单纯拼模型参数进入场景化应用阶段。 分析师评测Nvidia AI PC与微软Build大会展示的AI设备战略，认为Nvidia方案已显落后，微软的系统级AI整合愿景更具前瞻性。",
+      "path": "/reports/2026/06/03-evening.md",
+      "sourceCount": 5
+    },
     {
       "date": "2026-06-03",
       "edition": "morning",
