@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-06-02T12:03:39.161Z",
+  "generatedAt": "2026-06-03T01:28:05.895Z",
   "entries": [
+    {
+      "date": "2026-06-03",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-06-03",
+      "takeaway": "Claude Code 发布 v2.1.161 版本，OTEL 资源属性现可作为指标标签显示在监控数据点上，支持按团队、仓库等维度切片分析；fan-out 任务行新增进度显示；MCP 插件列表改为折叠式展示。",
+      "path": "/reports/2026/06/03-morning.md",
+      "sourceCount": 17
+    },
     {
       "date": "2026-06-02",
       "edition": "evening",
