@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-06-03T12:03:54.928Z",
+  "generatedAt": "2026-06-04T01:29:22.461Z",
   "entries": [
+    {
+      "date": "2026-06-04",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-06-04",
+      "takeaway": "阿里云开源AI迁移工具，实现ingress-nginx到Higress网关配置的自动化转换，将原本繁琐的迁移过程压缩至数分钟完成。",
+      "path": "/reports/2026/06/04-morning.md",
+      "sourceCount": 6
+    },
     {
       "date": "2026-06-03",
       "edition": "evening",
