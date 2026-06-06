@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-06-05T12:04:51.895Z",
+  "generatedAt": "2026-06-06T01:28:48.751Z",
   "entries": [
+    {
+      "date": "2026-06-06",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-06-06",
+      "takeaway": "Anthropic 在官方博客发布了 Claude Cowork 产品指南，详细介绍该协作工具的功能和使用方法。",
+      "path": "/reports/2026/06/06-morning.md",
+      "sourceCount": 17
+    },
     {
       "date": "2026-06-05",
       "edition": "evening",
