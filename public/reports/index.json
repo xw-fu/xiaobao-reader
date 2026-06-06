@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-06-06T01:28:48.751Z",
+  "generatedAt": "2026-06-06T12:04:31.399Z",
   "entries": [
+    {
+      "date": "2026-06-06",
+      "edition": "evening",
+      "title": "晓报 · 晚报 — 2026-06-06",
+      "takeaway": "Anthropic发布Claude Code v2.1.167版本，主要带来Bug修复和稳定性提升。 SpaceX的商业航天业务正在批量产生亿万富翁，其中一位女性领导者是真正的幕后推手，而非马斯克本人。",
+      "path": "/reports/2026/06/06-evening.md",
+      "sourceCount": 8
+    },
     {
       "date": "2026-06-06",
       "edition": "morning",
