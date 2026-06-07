@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-06-07T01:27:50.197Z",
+  "generatedAt": "2026-06-07T12:05:07.006Z",
   "entries": [
+    {
+      "date": "2026-06-07",
+      "edition": "evening",
+      "title": "晓报 · 晚报 — 2026-06-07",
+      "takeaway": "得物在AICon上海大会上分享了推荐AI Harness系统，展示了如何从混乱的代码架构演进到基于目标驱动的工程化生产模式。 某教育产品通过AI课程定价达17万一课，吸引了花旗、美银等华尔街金融机构付费购买。",
+      "path": "/reports/2026/06/07-evening.md",
+      "sourceCount": 2
+    },
     {
       "date": "2026-06-07",
       "edition": "morning",
