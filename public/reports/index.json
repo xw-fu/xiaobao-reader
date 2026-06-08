@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-06-07T12:05:07.006Z",
+  "generatedAt": "2026-06-08T01:29:04.938Z",
   "entries": [
+    {
+      "date": "2026-06-08",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-06-08",
+      "takeaway": "John D Cook博客探讨了一个基于物理常数（微波波长）的π计算公式，指出公式中λ的选择存在人为调整空间。",
+      "path": "/reports/2026/06/08-morning.md",
+      "sourceCount": 7
+    },
     {
       "date": "2026-06-07",
       "edition": "evening",
