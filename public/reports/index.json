@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-06-08T01:29:04.938Z",
+  "generatedAt": "2026-06-08T12:05:16.652Z",
   "entries": [
+    {
+      "date": "2026-06-08",
+      "edition": "evening",
+      "title": "晓报 · 晚报 — 2026-06-08",
+      "takeaway": "资深开发者评论指出，SwiftUI虽已推出七年，但始终难以帮助开发者构建符合Apple设计规范的高质量原生应用，与AppKit/UIKit形成鲜明对比。 Google与SpaceX达成算力采购协议，叠加Broadcom财报释放利好，双双指向英伟达需求强劲；苹果WWDC即将开幕，AI战略布局成焦点。",
+      "path": "/reports/2026/06/08-evening.md",
+      "sourceCount": 7
+    },
     {
       "date": "2026-06-08",
       "edition": "morning",
