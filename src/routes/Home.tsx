@@ -56,7 +56,7 @@ export default function Home() {
         </div>
         <h1 className={styles.headline}>{latest.takeaway}</h1>
         <div className={styles.meta}>
-          {isToday ? "今日" : "本期"}精选 <b>{latest.sourceCount}</b> 篇 &nbsp;·&nbsp; 由 Claude 整理
+          {isToday ? "今日" : "本期"}精选 <b>{latest.sourceCount}</b> 篇
         </div>
         <Link to={reportPath(latest)} className={styles.cta}>
           {isToday ? "阅读今日" : "阅读本期"} <span className={styles.arrow}>→</span>

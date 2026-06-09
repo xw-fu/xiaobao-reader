@@ -81,6 +81,7 @@ export default function Report() {
 
   return (
     <div className={styles.page}>
+      <Link to="/" className={styles.back}>← 返回首页</Link>
       <ReportView
         report={state.report}
         availableEditions={availableEditions}

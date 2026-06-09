@@ -27,8 +27,9 @@ export function ReportView({ report, availableEditions, onEditionChange }: Props
   return (
     <article>
       <header className={styles.header}>
-        <div className={styles.editionBadge}>
-          {EDITION_LABEL[report.meta.edition]} · {report.meta.date}
+        <div className={styles.eyebrow}>
+          <span className={styles.chip}>{EDITION_LABEL[report.meta.edition]}</span>
+          <span>{report.meta.date}</span>
         </div>
         <h1 className={styles.title}>{report.meta.title}</h1>
       </header>

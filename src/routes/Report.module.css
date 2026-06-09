@@ -1,7 +1,21 @@
 .page {
   max-width: var(--container-read);
   margin: 0 auto;
-  padding: 48px 24px 0;
+  padding: 40px 24px 0;
+}
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-label);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+  transition: color .15s ease;
+}
+.back:hover {
+  color: var(--accent);
 }
 .alert {
   max-width: var(--container);

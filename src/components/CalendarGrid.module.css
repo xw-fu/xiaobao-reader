@@ -97,12 +97,16 @@
 .cell {
   min-height: 134px;
   padding: 14px 16px 16px;
+  border: 0;
   border-right: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
   position: relative;
   background: var(--surface);
   text-align: left;
   font: inherit;
+  color: inherit;
+  appearance: none;
+  -webkit-appearance: none;
 }
 .cell:nth-child(7n) { border-right: none; }
 .daynum {
