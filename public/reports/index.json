@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-06-09T01:28:12.498Z",
+  "generatedAt": "2026-06-09T12:04:23.164Z",
   "entries": [
+    {
+      "date": "2026-06-09",
+      "edition": "evening",
+      "title": "晓报 · 晚报 — 2026-06-09",
+      "takeaway": "Java生态系统多项更新汇总，涵盖OpenJDK新JEP提案、Quarkus、Hibernate等主流框架，以及Koog、JHipster、Endive等新工具的近期动态。 Stratechery分析指出，Siri虽非业界最先进的技术，但对消费市场而言已足够好用，iPhone正面临如何在AI时代保持竞争力的关键挑战。",
+      "path": "/reports/2026/06/09-evening.md",
+      "sourceCount": 5
+    },
     {
       "date": "2026-06-09",
       "edition": "morning",
