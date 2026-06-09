@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-06-08T12:05:16.652Z",
+  "generatedAt": "2026-06-09T01:28:12.498Z",
   "entries": [
+    {
+      "date": "2026-06-09",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-06-09",
+      "takeaway": "Claude Code 发布 v2.1.169 版本，新增安全模式开关（可禁用所有自定义配置和插件）和 /cd 命令以在不破坏提示缓存的情况下切换工作目录。",
+      "path": "/reports/2026/06/09-morning.md",
+      "sourceCount": 7
+    },
     {
       "date": "2026-06-08",
       "edition": "evening",
