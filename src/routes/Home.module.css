@@ -1,0 +1,216 @@
+.page {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px 16px;
+}
+.empty {
+  padding: 64px 0;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ---------- Hero: latest edition ---------- */
+.hero {
+  padding: 72px 0 64px;
+}
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-label);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: .04em;
+  color: var(--text-secondary);
+  margin-bottom: 22px;
+}
+.chip {
+  font-family: var(--font-label);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--accent);
+  padding: 4px 9px;
+  border-radius: 999px;
+}
+.headline {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 42px;
+  line-height: 1.18;
+  letter-spacing: -.015em;
+  margin-bottom: 26px;
+}
+.meta {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--text-muted);
+  margin-bottom: 36px;
+}
+.meta b {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-label);
+  font-weight: 700;
+  font-size: 15px;
+  background: var(--accent);
+  color: #fff;
+  padding: 13px 24px;
+  border-radius: var(--radius);
+  transition: background .15s ease, transform .15s ease;
+}
+.cta:hover {
+  background: var(--accent-bright);
+  transform: translateY(-1px);
+}
+.arrow {
+  transition: transform .15s ease;
+}
+.cta:hover .arrow {
+  transform: translateX(3px);
+}
+
+.rule {
+  height: 1px;
+  background: var(--border);
+  border: none;
+}
+
+/* ---------- Recent list ---------- */
+.sectionLabel {
+  font-family: var(--font-label);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 56px 0 8px;
+}
+.list {
+  list-style: none;
+}
+.rowLink {
+  display: grid;
+  grid-template-columns: 92px 1fr auto;
+  gap: 20px;
+  align-items: baseline;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--rule);
+  transition: opacity .15s ease;
+}
+.rowLink:hover {
+  opacity: .62;
+}
+.rowLink:hover .rowTitle {
+  color: var(--accent);
+}
+.rowDate {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.rowMain {
+  min-width: 0;
+}
+.kicker {
+  display: inline-block;
+  font-family: var(--font-label);
+  font-weight: 700;
+  font-size: 10.5px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+.kMorning {
+  color: var(--accent);
+  background: var(--accent-fixed);
+}
+.kEvening {
+  color: var(--secondary);
+  background: var(--secondary-bg);
+}
+.rowTitle {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.4;
+  color: var(--text-primary);
+  transition: color .15s ease;
+}
+.rowCount {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* ---------- Archive card (demoted calendar) ---------- */
+.archive {
+  margin-top: 64px;
+  padding: 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.archiveTitle {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 19px;
+  margin-bottom: 4px;
+}
+.archiveText {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+.ghost {
+  font-family: var(--font-label);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--secondary);
+  border: 1px solid var(--secondary);
+  background: transparent;
+  padding: 10px 18px;
+  border-radius: var(--radius);
+  white-space: nowrap;
+  transition: background .15s ease;
+}
+.ghost:hover {
+  background: var(--secondary-bg);
+}
+
+@media (max-width: 560px) {
+  .headline {
+    font-size: 32px;
+  }
+  .rowLink {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .rowCount {
+    display: none;
+  }
+  .archive {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,12 +1,21 @@
 .footer {
   border-top: 1px solid var(--border);
-  margin-top: 64px;
+  margin-top: 80px;
 }
 .inner {
-  max-width: 960px;
+  max-width: var(--container-wide);
   margin: 0 auto;
-  padding: 16px 24px;
-  font-family: var(--font-mono);
-  font-size: .75rem;
+  padding: 28px 24px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-family: var(--font-label);
+  font-size: .8rem;
   color: var(--text-muted);
+}
+.brand {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--text-secondary);
 }

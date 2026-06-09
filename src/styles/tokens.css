@@ -1,20 +1,41 @@
 :root {
-  --bg:             #faf9f7;
+  /* --- Warm Paper Editorial palette (see DESIGN.md) --- */
+  --bg:             #fcf9f8;  /* paper */
   --surface:        #ffffff;
-  --surface-alt:    #f4f2ee;
-  --border:         #e8e4de;
-  --text-primary:   #1a1917;
-  --text-secondary: #6b6966;
-  --text-muted:     #9c9894;
-  --accent:         #d97706;
-  --accent-light:   #fef3c7;
-  --accent-dark:    #b45309;
-  --rule:           #e5e2dc;
-  --font-sans:      'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-serif:     'Newsreader', 'Georgia', 'Times New Roman', serif;
-  --font-mono:      'JetBrains Mono', 'Fira Code', 'Menlo', monospace;
-  --radius:         8px;
-  --radius-sm:      5px;
-  --shadow-sm:      0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
-  --shadow:         0 4px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.04);
+  --surface-alt:    #f6f3f2;
+  --border:         #e9e5d0;  /* hairline cream */
+  --rule:           rgba(38, 38, 38, .08);
+
+  --text-primary:   #1b1c1c;  /* on-surface */
+  --text-secondary: #524435;  /* on-surface-variant */
+  --text-muted:     #857462;  /* outline */
+
+  /* Primary — Amber */
+  --accent:         #855300;  /* primary */
+  --accent-dark:    #6e4400;  /* pressed / strong text */
+  --accent-bright:  #d48806;  /* hover / active */
+  --accent-light:   #fdf4e3;  /* tint surface (today, hover) */
+  --accent-fixed:   #ffddb8;  /* morning chip / badge border */
+
+  /* Secondary — Terracotta */
+  --secondary:      #a0402c;
+  --secondary-bright:#c35a44;
+  --secondary-bg:   #fde4dd;  /* evening chip */
+
+  /* Typography */
+  --font-sans:  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-label: 'Plus Jakarta Sans', var(--font-sans);
+  --font-mono:  'JetBrains Mono', 'Fira Code', 'Menlo', monospace;
+
+  /* Shape & depth */
+  --radius:    8px;
+  --radius-sm: 5px;
+  --shadow-sm: 0 1px 3px rgba(38, 38, 38, .04);
+  --shadow:    0 4px 20px rgba(38, 38, 38, .04);
+
+  /* Layout containers */
+  --container:      760px;   /* home / search */
+  --container-read: 820px;   /* report reading column */
+  --container-wide: 1200px;  /* archive calendar + app chrome */
 }

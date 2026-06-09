@@ -5,6 +5,7 @@ import { loadReport, ReportNotFoundError } from "../data/report";
 import { ReportParseError } from "../types";
 import type { Edition, ManifestEntry, Report as ReportT } from "../types";
 import { ReportView } from "../components/ReportView";
+import styles from "./Report.module.css";
 
 function pickEntries(entries: ManifestEntry[], date: string): ManifestEntry[] {
   return entries.filter((e) => e.date === date);
@@ -60,29 +61,31 @@ export default function Report() {
 
   if (status.kind !== "ready") return null;
 
-  if (state.kind === "loading") return <p>加载报告中…</p>;
+  if (state.kind === "loading") return <div className={styles.alert}><p>加载报告中…</p></div>;
   if (state.kind === "notfound") {
     return (
-      <div role="alert">
+      <div className={styles.alert} role="alert">
         <p>找不到这份报告。</p>
-        <Link to="/">返回日历</Link>
+        <Link to="/">返回首页</Link>
       </div>
     );
   }
   if (state.kind === "error") {
     return (
-      <div role="alert">
+      <div className={styles.alert} role="alert">
         <p>读取报告时发生错误：{state.message}</p>
-        <Link to="/">返回日历</Link>
+        <Link to="/">返回首页</Link>
       </div>
     );
   }
 
   return (
-    <ReportView
-      report={state.report}
-      availableEditions={availableEditions}
-      onEditionChange={(e) => navigate(`/r/${date}/${e}`)}
-    />
+    <div className={styles.page}>
+      <ReportView
+        report={state.report}
+        availableEditions={availableEditions}
+        onEditionChange={(e) => navigate(`/r/${date}/${e}`)}
+      />
+    </div>
   );
 }

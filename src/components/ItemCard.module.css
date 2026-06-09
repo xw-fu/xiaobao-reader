@@ -40,7 +40,7 @@
   margin-bottom: 3px;
 }
 .what { color: var(--accent-dark); }
-.so { color: #6366f1; }
+.so { color: var(--secondary); }
 .body p {
   font-size: .875rem;
   color: var(--text-secondary);

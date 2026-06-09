@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import type { ManifestEntry } from "../types";
 import styles from "./CalendarGrid.module.css";
 
@@ -46,13 +46,13 @@ export function CalendarGrid({ entries }: Props) {
   const first = firstOfMonth(year, month);
   const offset = first.getDay();
   const total = daysInMonth(year, month);
-  const cells: { dateStr: string | null; inMonth: boolean }[] = [];
-  for (let i = 0; i < offset; i++) cells.push({ dateStr: null, inMonth: false });
+  const cells: { dateStr: string | null }[] = [];
+  for (let i = 0; i < offset; i++) cells.push({ dateStr: null });
   for (let d = 1; d <= total; d++) {
     const dateStr = `${year}-${String(month + 1).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
-    cells.push({ dateStr, inMonth: true });
+    cells.push({ dateStr });
   }
-  while (cells.length % 7 !== 0) cells.push({ dateStr: null, inMonth: false });
+  while (cells.length % 7 !== 0) cells.push({ dateStr: null });
 
   function prevMonth() {
     if (month === 0) { setYear(year - 1); setMonth(11); } else setMonth(month - 1);
@@ -69,50 +69,77 @@ export function CalendarGrid({ entries }: Props) {
 
   return (
     <div className={styles.wrap}>
-      <div className={styles.bar}>
-        <div className={styles.title}>{year}年 {month + 1}月</div>
-        <div style={{ display: "flex", gap: 8 }}>
-          <button type="button" className={styles.navbtn} onClick={prevMonth}>‹</button>
+      <div className={styles.top}>
+        <div>
+          <Link to="/" className={styles.back}>← 返回今日</Link>
+          <div className={styles.kicker}>归档 · Archive</div>
+          <h1 className={styles.title}>{year}年 {month + 1}月</h1>
+          <div className={styles.sub}>共 {entries.length} 期 · 点击任意一天回看当日精选</div>
+        </div>
+        <div className={styles.nav}>
+          <button type="button" className={`${styles.navbtn} ${styles.sq}`} onClick={prevMonth} aria-label="上个月">‹</button>
           <button type="button" className={styles.navbtn} onClick={jumpToday}>今日</button>
-          <button type="button" className={styles.navbtn} onClick={nextMonth} disabled={!canGoNext}>›</button>
+          <button type="button" className={`${styles.navbtn} ${styles.sq}`} onClick={nextMonth} disabled={!canGoNext} aria-label="下个月">›</button>
         </div>
       </div>
-      <div className={styles.weekdays}>
-        {WEEKDAYS.map((w) => <div key={w} className={styles.weekday}>{w}</div>)}
+
+      <div className={styles.cal}>
+        <div className={styles.weekdays}>
+          {WEEKDAYS.map((w) => <div key={w} className={styles.weekday}>{w}</div>)}
+        </div>
+        <div className={styles.grid}>
+          {cells.map((c, i) => {
+            if (!c.dateStr) return <div key={i} className={`${styles.cell} ${styles.outside}`} aria-hidden />;
+            const dayEntries = byDate.get(c.dateStr) ?? [];
+            const has = dayEntries.length > 0;
+            const isToday = c.dateStr === todayStr;
+            const dayNum = Number(c.dateStr.slice(8));
+            const className = [
+              styles.cell,
+              has ? styles.has : styles.empty,
+              isToday ? styles.today : "",
+            ].filter(Boolean).join(" ");
+
+            if (!has) {
+              return (
+                <div key={i} className={className} aria-label={`${year}年${month + 1}月${dayNum}日`}>
+                  <span className={styles.daynum}>{dayNum}</span>
+                </div>
+              );
+            }
+
+            const hasMorning = dayEntries.some((e) => e.edition === "morning");
+            const hasEvening = dayEntries.some((e) => e.edition === "evening");
+            const lead = dayEntries.find((e) => e.edition === "morning") ?? dayEntries[0];
+            const ariaLabel = `${year}年${month + 1}月${dayNum}日 · ${lead.takeaway.slice(0, 30)}`;
+            const tooltip = `${lead.title}\n${lead.takeaway}`;
+
+            return (
+              <button
+                key={i}
+                type="button"
+                className={className}
+                title={tooltip}
+                aria-label={ariaLabel}
+                onClick={() => navigate(`/r/${c.dateStr}`)}
+              >
+                <span className={styles.daynum}>{dayNum}</span>
+                {isToday && <span className={styles.todayPill}>今日</span>}
+                <span className={styles.dots}>
+                  {hasMorning && <span className={`${styles.dot} ${styles.dotMorning}`} />}
+                  {hasEvening && <span className={`${styles.dot} ${styles.dotEvening}`} />}
+                </span>
+                <span className={styles.snip}>{lead.takeaway}</span>
+              </button>
+            );
+          })}
+        </div>
       </div>
-      <div className={styles.grid}>
-        {cells.map((c, i) => {
-          if (!c.dateStr) return <div key={i} className={`${styles.cell} ${styles.outside}`} aria-hidden />;
-          const dayEntries = byDate.get(c.dateStr) ?? [];
-          const has = dayEntries.length > 0;
-          const isToday = c.dateStr === todayStr;
-          const className = [
-            styles.cell,
-            has ? styles.has : "",
-            isToday ? styles.today : "",
-          ].filter(Boolean).join(" ");
-          const dayNum = Number(c.dateStr.slice(8));
-          const ariaLabel = has
-            ? `${year}年${month + 1}月${dayNum}日 · ${dayEntries[0].takeaway.slice(0, 30)}`
-            : `${year}年${month + 1}月${dayNum}日`;
-          const tooltip = has
-            ? `${dayEntries[0].title}\n${dayEntries[0].takeaway}`
-            : undefined;
-          return has ? (
-            <button
-              key={i}
-              type="button"
-              className={className}
-              title={tooltip}
-              aria-label={ariaLabel}
-              onClick={() => navigate(`/r/${c.dateStr}`)}
-            >
-              {dayNum}
-            </button>
-          ) : (
-            <div key={i} className={className} aria-label={ariaLabel}>{dayNum}</div>
-          );
-        })}
+
+      <div className={styles.legend}>
+        <span className={styles.legendItem}><span className={`${styles.dot} ${styles.dotMorning} ${styles.dotLg}`} /> 早报</span>
+        <span className={styles.legendItem}><span className={`${styles.dot} ${styles.dotEvening} ${styles.dotLg}`} /> 晚报</span>
+        <span className={styles.legendItem}><span className={styles.legendToday} /> 今日</span>
       </div>
     </div>
   );

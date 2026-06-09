@@ -17,8 +17,13 @@
   padding: 14px 16px;
   box-shadow: var(--shadow-sm);
 }
-.result:hover { border-color: #d4cfc8; }
+.result:hover { border-color: var(--accent-bright); }
 .meta { font-size: .75rem; color: var(--accent-dark); font-weight: 600; margin-bottom: 4px; }
 .title { font-family: var(--font-serif); font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
 .snippet { font-size: .85rem; color: var(--text-secondary); }
 .empty { color: var(--text-muted); font-style: italic; }
+.page {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 48px 24px 0;
+}

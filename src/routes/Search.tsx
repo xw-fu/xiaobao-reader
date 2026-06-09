@@ -23,7 +23,7 @@ export default function Search() {
   if (status.kind !== "ready") return null;
 
   return (
-    <div>
+    <div className={styles.page}>
       <input
         type="text"
         className={styles.input}
