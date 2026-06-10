@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-06-09T12:04:23.164Z",
+  "generatedAt": "2026-06-10T01:28:55.069Z",
   "entries": [
+    {
+      "date": "2026-06-10",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-06-10",
+      "takeaway": "WWDC 2026期间，苹果官方博客详细解读了macOS/iOS 27系统中多项不易察觉的功能改进。",
+      "path": "/reports/2026/06/10-morning.md",
+      "sourceCount": 14
+    },
     {
       "date": "2026-06-09",
       "edition": "evening",
