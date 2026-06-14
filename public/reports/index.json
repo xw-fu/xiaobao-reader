@@ -1,6 +1,70 @@
 {
-  "generatedAt": "2026-06-10T01:28:55.069Z",
+  "generatedAt": "2026-06-14T01:27:37.857Z",
   "entries": [
+    {
+      "date": "2026-06-14",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-06-14",
+      "takeaway": "1995年，程序员Adam Back为抗议美国将强加密技术列为「军火」出口管制，用Perl语言编写了一段极简的RSA加密代码作为邮件签名，代码后来还被印在T恤上传播。",
+      "path": "/reports/2026/06/14-morning.md",
+      "sourceCount": 6
+    },
+    {
+      "date": "2026-06-13",
+      "edition": "evening",
+      "title": "晓报 · 晚报 — 2026-06-13",
+      "takeaway": "美国商务部对 Anthropic 最新 AI 模型实施出口管制或禁用措施，这一激进举措标志着美国政府对 AI 行业监管态度从宽松转向强硬。 面壁智能开源社区负责人井晨哲将在 AICon 上海站分享端侧大模型的技术趋势与产业应用观察。",
+      "path": "/reports/2026/06/13-evening.md",
+      "sourceCount": 7
+    },
+    {
+      "date": "2026-06-13",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-06-13",
+      "takeaway": "Anthropic 发布 Claude Code 编程工具新版本 v2.1.177，对代码编辑、任务规划和工具调用等功能进行更新。",
+      "path": "/reports/2026/06/13-morning.md",
+      "sourceCount": 19
+    },
+    {
+      "date": "2026-06-12",
+      "edition": "evening",
+      "title": "晓报 · 晚报 — 2026-06-12",
+      "takeaway": "Claude Code v2.1.175 新增 enforceAvailableModels 托管设置，启用后 availableModels 白名单将约束默认模型，若默认模型不在白名单内则自动回退到首个允许模型，且用户或项目设置无法覆盖此限制。 InfoQ 发布奇遇旧金山收官篇，探访 Snowflake 硅谷总部，探讨 AI 时代高效能 Builder 的组织模式与实践，揭示人效近 400 万背后的方法论。",
+      "path": "/reports/2026/06/12-evening.md",
+      "sourceCount": 9
+    },
+    {
+      "date": "2026-06-12",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-06-12",
+      "takeaway": "Claude Code 发布 v2.1.174 版本，新增鼠标滚轮滚动加速开关，并修复模型选择器中默认模型的显示逻辑。",
+      "path": "/reports/2026/06/12-morning.md",
+      "sourceCount": 10
+    },
+    {
+      "date": "2026-06-11",
+      "edition": "evening",
+      "title": "晓报 · 晚报 — 2026-06-11",
+      "takeaway": "Anthropic新模型Claude Fable 5被发现存在\"Low档\"运行模式，使用该档位的成本比次高级Opus更低。 阿里免费推出高考志愿填报AI Agent，基于40万AI考生的压测数据训练完成。",
+      "path": "/reports/2026/06/11-evening.md",
+      "sourceCount": 5
+    },
+    {
+      "date": "2026-06-11",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-06-11",
+      "takeaway": "OpenAI 为 Codex 编程智能体推出安全的 Windows 沙盒环境，用于隔离执行代码操作。",
+      "path": "/reports/2026/06/11-morning.md",
+      "sourceCount": 5
+    },
+    {
+      "date": "2026-06-10",
+      "edition": "evening",
+      "title": "晓报 · 晚报 — 2026-06-10",
+      "takeaway": "抖音正式推出AI视频创作者招募计划，面向全网征召具备AI视频创作能力的内容创作者，提供流量扶持和商业变现机会。 AI视频生成平台Fable发布第五代产品，该版本基于Mythos系统定制，但引发关于Anthropic安全对齐协议被绕过的担忧，同时业界开始讨论AI能力分层治理框架。",
+      "path": "/reports/2026/06/10-evening.md",
+      "sourceCount": 3
+    },
     {
       "date": "2026-06-10",
       "edition": "morning",
