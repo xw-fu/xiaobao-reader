@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-06-14T01:27:37.857Z",
+  "generatedAt": "2026-06-14T12:03:44.963Z",
   "entries": [
+    {
+      "date": "2026-06-14",
+      "edition": "evening",
+      "title": "晓报 · 晚报 — 2026-06-14",
+      "takeaway": "蚂蚁数科在AICon上海峰会上公开分享其企业级AGI研发体系的重塑实战经验，展示如何构建面向大规模商用的AI基础设施与组织协同机制。 OpenAI最新发布的GPT-5.5模型及Codex编程助手已正式登陆亚马逊云科技AWS Bedrock平台，企业用户可直接通过云服务调用。",
+      "path": "/reports/2026/06/14-evening.md",
+      "sourceCount": 2
+    },
     {
       "date": "2026-06-14",
       "edition": "morning",
