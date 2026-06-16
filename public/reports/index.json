@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-06-15T12:03:54.612Z",
+  "generatedAt": "2026-06-16T01:27:08.357Z",
   "entries": [
+    {
+      "date": "2026-06-16",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-06-16",
+      "takeaway": "数学博客作者John D Cook探讨了如何判定一个数是否为五边形数（包括正五边形数和广义五边形数），展示了基于公式Pn=(3n²−n)/2的判定算法实现。",
+      "path": "/reports/2026/06/16-morning.md",
+      "sourceCount": 12
+    },
     {
       "date": "2026-06-15",
       "edition": "evening",
