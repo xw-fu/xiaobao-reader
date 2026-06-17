@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-06-16T01:27:08.357Z",
+  "generatedAt": "2026-06-17T01:29:21.333Z",
   "entries": [
+    {
+      "date": "2026-06-17",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-06-17",
+      "takeaway": "微软开源了一款 PostgreSQL 扩展，实现数据库内持久化执行能力，允许存储过程和用户定义函数在数据库内部保持状态运行。",
+      "path": "/reports/2026/06/17-morning.md",
+      "sourceCount": 20
+    },
     {
       "date": "2026-06-16",
       "edition": "morning",
