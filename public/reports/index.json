@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-06-18T12:04:45.857Z",
+  "generatedAt": "2026-06-19T01:30:08.652Z",
   "entries": [
+    {
+      "date": "2026-06-19",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-06-19",
+      "takeaway": "Anthropic 发布官方指南，详细介绍 Claude Code 的多种引导机制，包括 CLAUDE.md 配置文件、skills 自定义技能、hooks 钩子函数、rules 规则引擎以及 subagents 子代理功能。",
+      "path": "/reports/2026/06/19-morning.md",
+      "sourceCount": 16
+    },
     {
       "date": "2026-06-18",
       "edition": "evening",
