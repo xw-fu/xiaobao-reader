@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-06-19T01:30:08.652Z",
+  "generatedAt": "2026-06-19T12:05:06.070Z",
   "entries": [
+    {
+      "date": "2026-06-19",
+      "edition": "evening",
+      "title": "晓报 · 晚报 — 2026-06-19",
+      "takeaway": "Spring Boot 4.1正式发布，首次集成gRPC自动配置、内置SSRF攻击防护机制，并全面支持Kotlin 2.3版本，进一步简化云原生微服务开发流程。 平安人寿在AICon上海大会上分享了AI神盾平台的智能风控实践，展示该平台如何通过机器学习技术实现金融业务全链路风险识别与防控。",
+      "path": "/reports/2026/06/19-evening.md",
+      "sourceCount": 5
+    },
     {
       "date": "2026-06-19",
       "edition": "morning",
