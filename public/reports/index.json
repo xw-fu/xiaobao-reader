@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-06-20T12:04:28.248Z",
+  "generatedAt": "2026-06-21T01:27:42.370Z",
   "entries": [
+    {
+      "date": "2026-06-21",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-06-21",
+      "takeaway": "博客作者演示用 Claude 生成 Z3/Python 代码求解 6×5 棋盘上摆放所有棋子的谜题，这是其 LLM 生成代码系列文章的第三篇。",
+      "path": "/reports/2026/06/21-morning.md",
+      "sourceCount": 2
+    },
     {
       "date": "2026-06-20",
       "edition": "evening",
