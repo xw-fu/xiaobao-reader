@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-06-22T12:05:17.023Z",
+  "generatedAt": "2026-06-23T01:33:35.942Z",
   "entries": [
+    {
+      "date": "2026-06-23",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-06-23",
+      "takeaway": "AI产品生态正加速向多平台扩展，Anthropic近期在云平台支持与开发者工具两条路径同步推进，进一步完善了Claude的部署选择和集成便利性。与此同时，移动端影像硬件持续迭代，超广角摄像头正从中高端专属向更广泛机型普及，其应用场景也从传统摄影向视频、AR等多元领域延伸。",
+      "path": "/reports/2026/06/23-morning.md",
+      "sourceCount": 12
+    },
     {
       "date": "2026-06-22",
       "edition": "evening",
