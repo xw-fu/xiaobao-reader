@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-06-25T04:04:31.161Z",
+  "generatedAt": "2026-06-26T01:29:54.237Z",
   "entries": [
+    {
+      "date": "2026-06-26",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-06-26",
+      "takeaway": "这期内容聚焦Apple生态系统动态。Mac和iPad产品线的15-25%涨价与iPhone等核心产品维持原价形成对比，折射出Apple差异化定价逻辑；同期Journal应用撤销bug的修复则体现了软件质量管控的持续改进。Claude Code新版发布的权限管理功能为开发者安全实践提供了新工具，而资深科技评论人Om Malik的逝世则为行业留下了值得回味的媒体遗产。",
+      "path": "/reports/2026/06/26-morning.md",
+      "sourceCount": 22
+    },
     {
       "date": "2026-06-25",
       "edition": "morning",
