@@ -1,7 +1,7 @@
 import { readdirSync, statSync, readFileSync, writeFileSync } from "node:fs";
 import { join, relative, sep } from "node:path";
 import { parseManifestEntry } from "../src/data/parser";
-import type { Manifest, ManifestEntry } from "../src/types";
+import type { Manifest, ManifestEntry, Edition } from "../src/types";
 
 function* walk(dir: string): Generator<string> {
   for (const entry of readdirSync(dir)) {
@@ -32,11 +32,12 @@ export function buildIndex(reportsDir: string): Manifest {
       console.warn(`[build-index] skipping ${path}: ${reason}`);
     }
   }
-  // Sort: date desc, then evening before morning so evening lands first on same date.
+  // Sort: date desc, then within the same date show evening → morning → health
+  // (noon edition rounds out the day after morning + evening).
+  const EDITION_ORDER: Record<Edition, number> = { evening: 0, morning: 1, health: 2 };
   entries.sort((a, b) => {
     if (a.date !== b.date) return b.date.localeCompare(a.date);
-    if (a.edition === b.edition) return 0;
-    return a.edition === "evening" ? -1 : 1;
+    return EDITION_ORDER[a.edition] - EDITION_ORDER[b.edition];
   });
 
   const manifest: Manifest = {

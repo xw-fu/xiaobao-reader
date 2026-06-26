@@ -1,4 +1,4 @@
-export type Edition = "morning" | "evening";
+export type Edition = "morning" | "evening" | "health";
 
 export interface ManifestEntry {
   date: string;          // ISO date, e.g. "2026-05-19"

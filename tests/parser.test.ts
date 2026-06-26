@@ -4,6 +4,7 @@ import { resolve } from "node:path";
 import { parseReport, parseManifestEntry } from "../src/data/parser";
 
 const golden = readFileSync(resolve(__dirname, "fixtures/golden.md"), "utf8");
+const health = readFileSync(resolve(__dirname, "fixtures/health.md"), "utf8");
 
 describe("parseReport - header + takeaway", () => {
   it("extracts the title, date, and edition from the H1", () => {
@@ -12,6 +13,22 @@ describe("parseReport - header + takeaway", () => {
     expect(r.meta.date).toBe("2026-05-19");
     expect(r.meta.edition).toBe("morning");
     expect(r.meta.path).toBe("/reports/2026/05/19-morning.md");
+  });
+
+  it("maps 午报 title to health edition", () => {
+    // The health edition (晓报 · 午报) was added in Wave 6 but the parser's
+    // EDITION_WORDS table never grew to include it — so health reports
+    // were silently dropped from the reader index.
+    const r = parseReport(health, "/reports/2026/05/19-health.md");
+    expect(r.meta.title).toBe("晓报 · 午报 — 2026-05-19");
+    expect(r.meta.date).toBe("2026-05-19");
+    expect(r.meta.edition).toBe("health");
+  });
+
+  it("exposes the health edition in the manifest entry helper too", () => {
+    const e = parseManifestEntry(health, "/reports/2026/05/19-health.md");
+    expect(e.edition).toBe("health");
+    expect(e.sourceCount).toBeGreaterThan(0);
   });
 
   it("extracts the takeaway paragraph (今日要点)", () => {

@@ -140,6 +140,10 @@
   color: var(--secondary);
   background: var(--secondary-bg);
 }
+.kHealth {
+  color: var(--tertiary);
+  background: var(--tertiary-bg);
+}
 .rowTitle {
   display: -webkit-box;
   -webkit-line-clamp: 2;

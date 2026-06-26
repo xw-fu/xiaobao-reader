@@ -11,14 +11,18 @@ function pickEntries(entries: ManifestEntry[], date: string): ManifestEntry[] {
   return entries.filter((e) => e.date === date);
 }
 
+const EDITION_PRIORITY: Record<Edition, number> = { morning: 0, evening: 1, health: 2 };
+
 function pickActive(entriesForDate: ManifestEntry[], requested?: string): ManifestEntry | null {
   if (entriesForDate.length === 0) return null;
-  if (requested === "morning" || requested === "evening") {
+  if (requested === "morning" || requested === "evening" || requested === "health") {
     const found = entriesForDate.find((e) => e.edition === requested);
     if (found) return found;
   }
-  const morning = entriesForDate.find((e) => e.edition === "morning");
-  return morning ?? entriesForDate[0];
+  // Default landing for a day: prefer morning, then any other edition in priority order.
+  return [...entriesForDate].sort(
+    (a, b) => EDITION_PRIORITY[a.edition] - EDITION_PRIORITY[b.edition],
+  )[0];
 }
 
 type State =
@@ -39,7 +43,10 @@ export default function Report() {
   );
   const active = useMemo(() => pickActive(entriesForDate, edition), [entriesForDate, edition]);
   const availableEditions: Edition[] = useMemo(
-    () => entriesForDate.map((e) => e.edition).sort((a) => (a === "morning" ? -1 : 1)),
+    () =>
+      [...entriesForDate.map((e) => e.edition)].sort(
+        (a, b) => EDITION_PRIORITY[a] - EDITION_PRIORITY[b],
+      ),
     [entriesForDate],
   );
 

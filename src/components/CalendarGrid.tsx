@@ -110,7 +110,16 @@ export function CalendarGrid({ entries }: Props) {
 
             const hasMorning = dayEntries.some((e) => e.edition === "morning");
             const hasEvening = dayEntries.some((e) => e.edition === "evening");
-            const lead = dayEntries.find((e) => e.edition === "morning") ?? dayEntries[0];
+            const hasHealth = dayEntries.some((e) => e.edition === "health");
+            // Lead: prefer evening (richest editorial), then morning, then health.
+            const EDITION_LEAD_PRIORITY: Record<string, number> = {
+              evening: 0,
+              morning: 1,
+              health: 2,
+            };
+            const lead = [...dayEntries].sort(
+              (a, b) => EDITION_LEAD_PRIORITY[a.edition] - EDITION_LEAD_PRIORITY[b.edition],
+            )[0];
             const ariaLabel = `${year}年${month + 1}月${dayNum}日 · ${lead.takeaway.slice(0, 30)}`;
             const tooltip = `${lead.title}\n${lead.takeaway}`;
 
@@ -128,6 +137,7 @@ export function CalendarGrid({ entries }: Props) {
                 <span className={styles.dots}>
                   {hasMorning && <span className={`${styles.dot} ${styles.dotMorning}`} />}
                   {hasEvening && <span className={`${styles.dot} ${styles.dotEvening}`} />}
+                  {hasHealth && <span className={`${styles.dot} ${styles.dotHealth}`} />}
                 </span>
                 <span className={styles.snip}>{lead.takeaway}</span>
               </button>
@@ -139,6 +149,7 @@ export function CalendarGrid({ entries }: Props) {
       <div className={styles.legend}>
         <span className={styles.legendItem}><span className={`${styles.dot} ${styles.dotMorning} ${styles.dotLg}`} /> 早报</span>
         <span className={styles.legendItem}><span className={`${styles.dot} ${styles.dotEvening} ${styles.dotLg}`} /> 晚报</span>
+        <span className={styles.legendItem}><span className={`${styles.dot} ${styles.dotHealth} ${styles.dotLg}`} /> 午报</span>
         <span className={styles.legendItem}><span className={styles.legendToday} /> 今日</span>
       </div>
     </div>

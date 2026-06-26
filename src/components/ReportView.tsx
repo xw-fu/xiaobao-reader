@@ -13,7 +13,7 @@ interface Props {
   onEditionChange: (e: Edition) => void;
 }
 
-const EDITION_LABEL: Record<Edition, string> = { morning: "早报", evening: "晚报" };
+const EDITION_LABEL: Record<Edition, string> = { morning: "早报", evening: "晚报", health: "午报" };
 
 export function ReportView({ report, availableEditions, onEditionChange }: Props) {
   const [activeSource, setActiveSource] = useState<string | null>(null);

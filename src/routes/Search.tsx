@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useManifest } from "../data/ManifestContext";
 import styles from "./Search.module.css";
 
-const LABEL = { morning: "早报", evening: "晚报" } as const;
+const LABEL = { morning: "早报", evening: "晚报", health: "午报" } as const;
 
 export default function Search() {
   const { status } = useManifest();

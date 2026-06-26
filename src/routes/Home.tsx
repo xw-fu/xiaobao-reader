@@ -3,7 +3,13 @@ import { useManifest } from "../data/ManifestContext";
 import type { ManifestEntry } from "../types";
 import styles from "./Home.module.css";
 
-const EDITION_LABEL = { morning: "早报", evening: "晚报" } as const;
+const EDITION_LABEL = { morning: "早报", evening: "晚报", health: "午报" } as const;
+
+const EDITION_KICKER_CLASS: Record<ManifestEntry["edition"], string> = {
+  morning: styles.kMorning,
+  evening: styles.kEvening,
+  health: styles.kHealth,
+};
 const WEEKDAYS = ["日", "一", "二", "三", "四", "五", "六"];
 
 function ymd(d: Date): string {
@@ -73,9 +79,7 @@ export default function Home() {
               <span className={styles.rowDate}>{shortDate(e.date)}</span>
               <span className={styles.rowMain}>
                 <span
-                  className={`${styles.kicker} ${
-                    e.edition === "morning" ? styles.kMorning : styles.kEvening
-                  }`}
+                  className={`${styles.kicker} ${EDITION_KICKER_CLASS[e.edition]}`}
                 >
                   {EDITION_LABEL[e.edition]}
                 </span>

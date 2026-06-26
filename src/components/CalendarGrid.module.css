@@ -129,6 +129,7 @@
 .dotLg { width: 8px; height: 8px; }
 .dotMorning { background: var(--accent-bright); }
 .dotEvening { background: var(--secondary); }
+.dotHealth  { background: var(--tertiary); }
 
 .snip {
   display: -webkit-box;

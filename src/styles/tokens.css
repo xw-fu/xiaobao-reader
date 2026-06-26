@@ -22,6 +22,11 @@
   --secondary-bright:#c35a44;
   --secondary-bg:   #fde4dd;  /* evening chip */
 
+  /* Tertiary — Sage (health / 午报) */
+  --tertiary:       #4a6b54;
+  --tertiary-bright:#6b8a73;
+  --tertiary-bg:    #e6efe6;
+
   /* Typography */
   --font-sans:  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;

@@ -9,6 +9,7 @@ let publicReports: string;
 
 const golden = readFileSync(resolve(__dirname, "fixtures/golden.md"), "utf8");
 const evening = readFileSync(resolve(__dirname, "fixtures/evening.md"), "utf8");
+const health = readFileSync(resolve(__dirname, "fixtures/health.md"), "utf8");
 
 beforeEach(() => {
   tmpRoot = mkdtempSync(join(tmpdir(), "xiaobao-"));
@@ -68,6 +69,32 @@ describe("buildIndex", () => {
     const manifest = JSON.parse(readFileSync(join(publicReports, "index.json"), "utf8"));
     expect(manifest.entries[0].edition).toBe("evening");
     expect(manifest.entries[1].edition).toBe("morning");
+  });
+
+  it("includes a 午报 (health) report alongside morning/evening of the same date", () => {
+    // Regression: 2026-06-26 — health cron published to disk but the reader
+    // never showed it because the parser silently skipped 午报.
+    writeFileSync(join(publicReports, "2026", "05", "19-health.md"), health);
+    buildIndex(publicReports);
+    const manifest = JSON.parse(readFileSync(join(publicReports, "index.json"), "utf8"));
+    expect(manifest.entries).toHaveLength(3);
+    const paths = manifest.entries.map((e: { path: string }) => e.path);
+    expect(paths).toContain("/reports/2026/05/19-health.md");
+    const healthEntry = manifest.entries.find((e: { edition: string }) => e.edition === "health");
+    expect(healthEntry).toBeDefined();
+    expect(healthEntry.title).toBe("晓报 · 午报 — 2026-05-19");
+  });
+
+  it("orders same-date entries: evening, morning, health (noon sits at the end)", () => {
+    writeFileSync(join(publicReports, "2026", "05", "19-health.md"), health);
+    buildIndex(publicReports);
+    const manifest = JSON.parse(readFileSync(join(publicReports, "index.json"), "utf8"));
+    const sameDate = manifest.entries.filter((e: { date: string }) => e.date === "2026-05-19");
+    expect(sameDate.map((e: { edition: string }) => e.edition)).toEqual([
+      "evening",
+      "morning",
+      "health",
+    ]);
   });
 
   it("includes generatedAt as ISO timestamp", () => {
