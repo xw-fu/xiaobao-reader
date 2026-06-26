@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-06-26T04:04:26.831Z",
+  "generatedAt": "2026-06-26T12:03:48.194Z",
   "entries": [
+    {
+      "date": "2026-06-26",
+      "edition": "evening",
+      "title": "晓报 · 晚报 — 2026-06-26",
+      "takeaway": "本周AI领域呈现人才争夺与技术迭代的双重加速格局。Meta从谷歌吸纳推理人才的同时，Anthropic和OpenAI的产品更新已缩短至读秒级，大模型竞争的技术门槛快速抬高。与此同时，AI正从单点突破走向系统性整合——全流程开发工具、工业机器人数据底座和触觉预测系统等技术突破，正在加速从实验室到产业落地的进程。 Anthropic的Claude Fable分批恢复上线，同时OpenAI的GPT-5在6秒内迅速跟进发布。",
+      "path": "/reports/2026/06/26-evening.md",
+      "sourceCount": 5
+    },
     {
       "date": "2026-06-26",
       "edition": "morning",
