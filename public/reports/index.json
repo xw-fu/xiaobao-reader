@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-06-29T04:02:14.312Z",
+  "generatedAt": "2026-06-29T12:04:10.754Z",
   "entries": [
+    {
+      "date": "2026-06-29",
+      "edition": "evening",
+      "title": "晓报 · 晚报 — 2026-06-29",
+      "takeaway": "本期多条新闻指向AI基础设施加速成熟：AI代理身份认证标准化协议Auth.md的推出，与OceanBase融合湖仓与多模态数据的AI数据库产品相继面世，均表明为AI应用构建底层数据与身份验证能力正成为行业焦点。与此同时，DeepSeek在Claude Mythos压力下决定启动融资，折射出国产基础模型与国际领先者的差距仍待追赶，融资竞争料将进一步加剧。 WorkOS发布Auth.md开放协议，为AI代理（Agent）提供标准化的身份注册与认证机制，解决当前AI代理难以被企业系统信任识别的难题。",
+      "path": "/reports/2026/06/29-evening.md",
+      "sourceCount": 8
+    },
     {
       "date": "2026-06-29",
       "edition": "morning",
