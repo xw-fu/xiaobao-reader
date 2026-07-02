@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-07-02T04:03:28.327Z",
+  "generatedAt": "2026-07-02T12:03:58.679Z",
   "entries": [
+    {
+      "date": "2026-07-02",
+      "edition": "evening",
+      "title": "晓报 · 晚报 — 2026-07-02",
+      "takeaway": "本期智能体生态建设成为焦点。AReaL 2.0开源为Agent持续自演进提供了标准化训练框架，天工3.2推出的Skywork Tags则实现了多Agent身份标识与协同管理，推动AI Agent从单体能力向群体协作演进；与此同时，非英伟达生态下万亿模型的突破也为行业提供了新的技术路径选择。 一款完全不使用英伟达GPU的万亿参数大模型问世，在OpenRouter平台登顶热门榜单，受到海外开发者广泛追捧。",
+      "path": "/reports/2026/07/02-evening.md",
+      "sourceCount": 5
+    },
     {
       "date": "2026-07-02",
       "edition": "morning",
