@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-07-03T12:04:53.312Z",
+  "generatedAt": "2026-07-04T01:27:56.831Z",
   "entries": [
+    {
+      "date": "2026-07-04",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-07-04",
+      "takeaway": "AI应用的资源消耗与效率优化成为本期焦点。Electron框架的性能争议与Anthropic的提示词压缩方案，揭示了AI工具在技术选型与成本控制上的现实张力。与此同时，Claude Code的版本迭代与系统级调试方法论的探讨，提醒开发者在追求效率的同时需持续维护工作流稳定性，而Agent从工具向协作者的转变也催生了企业级治理的新命题。",
+      "path": "/reports/2026/07/04-morning.md",
+      "sourceCount": 10
+    },
     {
       "date": "2026-07-03",
       "edition": "evening",
