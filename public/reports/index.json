@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-07-08T12:04:05.707Z",
+  "generatedAt": "2026-07-09T01:28:38.413Z",
   "entries": [
+    {
+      "date": "2026-07-09",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-07-09",
+      "takeaway": "AI对话系统的发展轨迹在这些报道中清晰可见——从ELIZA、PARRY等早期实验，到SmarterChild等消费级产品，再到如今Thomson Reuters、Anthropic等企业将AI整合进专业工作流程，展示了这一领域从概念验证到规模落地的完整演变。这组新闻既呈现了技术演进的历史纵深，也反映了当前AI应用正向高风险专业场景纵深推进的趋势。",
+      "path": "/reports/2026/07/09-morning.md",
+      "sourceCount": 18
+    },
     {
       "date": "2026-07-08",
       "edition": "evening",
