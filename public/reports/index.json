@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-07-10T04:03:40.897Z",
+  "generatedAt": "2026-07-10T12:04:28.612Z",
   "entries": [
+    {
+      "date": "2026-07-10",
+      "edition": "evening",
+      "title": "晓报 · 晚报 — 2026-07-10",
+      "takeaway": "这期内容显示AI技术正从概念验证走向企业级规模化部署。德国电信将AI融入核心业务流程，HubSpot和九章云极等企业在向量检索、Token Factory等基础设施层面突破关键技术瓶颈。与此同时，Claude Code等开发工具持续迭代优化，业界也开始关注AI Agent在复杂场景下的稳定性问题，提示部署方在追求自动化的同时需配套完善的监控与人工介入机制。 Claude Code 发布 v2.1.206 版本，新增目录路径智能建议、CLAUDE.md 文件自动精简、commit-push-pr 流程自动化等开发者工具改进。",
+      "path": "/reports/2026/07/10-evening.md",
+      "sourceCount": 10
+    },
     {
       "date": "2026-07-10",
       "edition": "morning",
