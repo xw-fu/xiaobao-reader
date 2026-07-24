@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-24T01:27:30.267Z",
+  "generatedAt": "2026-07-24T04:02:38.060Z",
   "entries": [
     {
       "date": "2026-07-24",
@@ -8,6 +8,14 @@
       "takeaway": "三条新闻围绕John Dvorak这位著名科技评论人展开：从38年前他在节目中解析IBM PS/2与行业标准之争的珍贵影像，到他对苹果新闻广告体验问题的尖锐批评，再到他的逝世——这位以犀利著称的评论人见证并记录了数十年技术产业的变迁，其评论视角与产业洞察至今仍具参考价值。与此同时，AI驱动的垂直场景应用与数学基础研究则提示，技术生态的多层次演进从未停歇。",
       "path": "/reports/2026/07/24-morning.md",
       "sourceCount": 10
+    },
+    {
+      "date": "2026-07-24",
+      "edition": "health",
+      "title": "晓报 · 午报 — 2026-07-24",
+      "takeaway": "District judge assigned to oversee Apple's trade secrets lawsuit against OpenAI KFF最新民调显示，51%的选民认为医疗成本是中期选举中最关键的健康议题，其中民主党选民支持率达60%，独立派选民为55%，均超过半数。",
+      "path": "/reports/2026/07/24-health.md",
+      "sourceCount": 16
     },
     {
       "date": "2026-07-23",
