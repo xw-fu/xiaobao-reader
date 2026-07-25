@@ -112,6 +112,7 @@ describe("parseManifestEntry", () => {
       date: "2026-05-19",
       edition: "morning",
       title: "晓报 · 早报 — 2026-05-19",
+      lede: "",
       takeaway: expect.stringContaining("盖洛普民调"),
       path: "/reports/2026/05/19-morning.md",
       sourceCount: 7,
@@ -159,5 +160,24 @@ describe("parseReport - edge cases", () => {
   it("throws ReportParseError pointing at the bad funnel cell", () => {
     expect(() => parseReport(loadFixture("malformed-funnel.md"), "/r/x.md"))
       .toThrowError(/funnel\.bucket/);
+  });
+});
+
+describe("parseLede", () => {
+  const withLede = readFileSync(resolve(__dirname, "fixtures/with-lede.md"), "utf8");
+
+  it("returns the ## 概要 text when the block is present", () => {
+    const e = parseManifestEntry(withLede, "/reports/2026/05/19-morning.md");
+    expect(e.lede).toBe("AI 数据中心建设遭遇跨党派反对");
+  });
+
+  it("includes lede on the full parseReport output too", () => {
+    const r = parseReport(withLede, "/reports/2026/05/19-morning.md");
+    expect(r.meta.lede).toBe("AI 数据中心建设遭遇跨党派反对");
+  });
+
+  it("returns empty string when ## 概要 is absent", () => {
+    const e = parseManifestEntry(golden, "/reports/2026/05/19-morning.md");
+    expect(e.lede).toBe("");
   });
 });

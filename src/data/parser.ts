@@ -61,6 +61,19 @@ function contentStartIndex(lines: string[]): number {
   return secondH2 === -1 ? lines.length : secondH2;
 }
 
+function parseLede(lines: string[]): string {
+  // The lede lives in the first `## 概要` block. Returns "" if missing or empty.
+  const idx = findLineIndex(lines, (l) => l === "## 概要");
+  if (idx === -1) return "";
+  const collected: string[] = [];
+  for (let i = idx + 1; i < lines.length; i++) {
+    const l = lines[i];
+    if (l.startsWith("## ") || l.trim() === "---") break;
+    if (l.trim()) collected.push(l.trim());
+  }
+  return collected.join(" ").trim();
+}
+
 function parseTakeaway(lines: string[]): string {
   // Collect all text from the first ## heading up to the content boundary.
   // Multiple sub-headings before the boundary (e.g. 今日亮点 + 明日关注) are all takeaway.
@@ -207,13 +220,14 @@ function parseFooter(lines: string[]): { model: string; itemCount: number; gover
 export function parseReport(source: string, path: string): Report {
   const lines = splitLines(source);
   const { title, date, edition } = parseHeader(lines);
+  const lede = parseLede(lines);
   const takeaway = parseTakeaway(lines);
   const sections = parseSections(lines);
   const funnel = parseFunnel(lines);
   const footer = parseFooter(lines);
 
   const sourceCount = sections.reduce((n, s) => n + s.items.length, 0);
-  const meta: ManifestEntry = { date, edition, title, takeaway, path, sourceCount };
+  const meta: ManifestEntry = { date, edition, title, lede, takeaway, path, sourceCount };
 
   return { meta, takeaway, sections, funnel, footer };
 }
@@ -226,8 +240,9 @@ export function parseReport(source: string, path: string): Report {
 export function parseManifestEntry(source: string, path: string): ManifestEntry {
   const lines = splitLines(source);
   const { title, date, edition } = parseHeader(lines);
+  const lede = parseLede(lines);
   const takeaway = parseTakeaway(lines);
   const sections = parseSections(lines);
   const sourceCount = sections.reduce((n, s) => n + s.items.length, 0);
-  return { date, edition, title, takeaway, path, sourceCount };
+  return { date, edition, title, lede, takeaway, path, sourceCount };
 }
