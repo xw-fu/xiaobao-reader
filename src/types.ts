@@ -4,6 +4,7 @@ export interface ManifestEntry {
   date: string;          // ISO date, e.g. "2026-05-19"
   edition: Edition;
   title: string;         // "晓报 · 早报 — 2026-05-19"
+  lede: string;          // short headline from ## 概要 (25–40 chars), "" if absent
   takeaway: string;      // first paragraph under ## 今日要点
   path: string;          // "/reports/2026/05/19-morning.md"
   sourceCount: number;   // total items in the report
