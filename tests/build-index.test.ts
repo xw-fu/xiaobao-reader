@@ -58,10 +58,10 @@ describe("buildIndex", () => {
     expect(morning).toMatchObject({
       date: "2026-05-19",
       edition: "morning",
-      title: "晓报 · 早报 — 2026-05-19",
+      lede: "",
+      takeaway: expect.stringMatching(/盖洛普民调/),
       sourceCount: 7,
     });
-    expect(morning.takeaway).toMatch(/^盖洛普民调/);
   });
 
   it("sorts entries by date desc, then edition (evening after morning of same date)", () => {
