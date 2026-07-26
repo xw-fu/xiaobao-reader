@@ -51,7 +51,7 @@ describe("buildIndex", () => {
     expect(manifest.entries).toHaveLength(2);
   });
 
-  it("entries include date, edition, title, takeaway, sourceCount", () => {
+  it("entries include date, edition, lede, takeaway, sourceCount", () => {
     buildIndex(publicReports);
     const manifest = JSON.parse(readFileSync(join(publicReports, "index.json"), "utf8"));
     const morning = manifest.entries.find((e: { edition: string }) => e.edition === "morning");
