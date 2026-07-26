@@ -1,6 +1,9 @@
 # 晓报 · 午报 — 2026-07-14
 
-*午安！以下是今日健康与可穿戴领域速览。*
+## 概要
+
+Apple在Apple Music中推出Playlist Playground功
+
 
 ## 今日亮点
 

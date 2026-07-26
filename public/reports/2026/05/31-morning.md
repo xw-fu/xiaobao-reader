@@ -1,6 +1,9 @@
 # 晓报 · 早报 — 2026-05-31
 
-*早安！以下是今日要闻速览。*
+## 概要
+
+研究者通过Pyodide和Service Worker实现Python ASGI
+
 
 ## 今日要点
 

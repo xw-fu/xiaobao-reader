@@ -1,6 +1,9 @@
 # 晓报 · 午报 — 2026-07-24
 
-*午安！以下是今日健康与可穿戴领域速览。*
+## 概要
+
+District judge assigned to oversee Apple
+
 
 ## 今日亮点
 
