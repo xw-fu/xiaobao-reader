@@ -68,6 +68,7 @@ function parseLede(lines: string[]): string {
   const collected: string[] = [];
   for (let i = idx + 1; i < lines.length; i++) {
     const l = lines[i];
+    if (l.includes(FUNNEL_MARKER)) break;
     if (l.startsWith("## ") || l.trim() === "---") break;
     if (l.trim()) collected.push(l.trim());
   }

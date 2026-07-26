@@ -180,4 +180,61 @@ describe("parseLede", () => {
     const e = parseManifestEntry(golden, "/reports/2026/05/19-morning.md");
     expect(e.lede).toBe("");
   });
+
+  it("stops the ## 概要 block at the funnel marker", () => {
+    const src = [
+      "# 晓报 · 早报 — 2026-05-19",
+      "",
+      "## 概要",
+      "",
+      "摘要正文",
+      "",
+      "**数据漏斗 · Funnel**",
+      "",
+      "| 数据源 | 收集 | 过滤 | 治理 | 最终 |",
+    ].join("\n");
+    const e = parseManifestEntry(src, "/x.md");
+    expect(e.lede).toBe("摘要正文");
+  });
+
+  it("returns empty string when ## 概要 block has only whitespace", () => {
+    const src = [
+      "# 晓报 · 早报 — 2026-05-19",
+      "",
+      "## 概要",
+      "",
+      "   ",
+      "",
+      "## 今日要点",
+      "",
+      "Some takeaway text.",
+      "",
+      "---",
+      "",
+      "## Content",
+    ].join("\n");
+    const e = parseManifestEntry(src, "/x.md");
+    expect(e.lede).toBe("");
+  });
+
+  it("joins multi-line ## 概要 text with a single space", () => {
+    const src = [
+      "# 晓报 · 早报 — 2026-05-19",
+      "",
+      "## 概要",
+      "",
+      "第一行摘要",
+      "第二行补充",
+      "",
+      "## 今日要点",
+      "",
+      "Some takeaway text.",
+      "",
+      "---",
+      "",
+      "## Content",
+    ].join("\n");
+    const e = parseManifestEntry(src, "/x.md");
+    expect(e.lede).toBe("第一行摘要 第二行补充");
+  });
 });
