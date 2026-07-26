@@ -11,7 +11,7 @@
 
 /* ---------- Hero: latest edition ---------- */
 .hero {
-  padding: 72px 0 64px;
+  padding: 56px 0 48px;
 }
 .eyebrow {
   display: inline-flex;
@@ -35,14 +35,25 @@
   padding: 4px 9px;
   border-radius: 999px;
 }
-.headline {
+.lede {
   font-family: var(--font-serif);
   font-weight: 700;
   color: var(--text-primary);
-  font-size: 42px;
+  font-size: 36px;
   line-height: 1.18;
   letter-spacing: -.015em;
-  margin-bottom: 26px;
+  margin: 0 0 14px;
+}
+.takeaway {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  max-width: 64ch;
+  margin: 0 0 28px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .meta {
   font-family: var(--font-mono);
@@ -203,8 +214,11 @@
 }
 
 @media (max-width: 560px) {
-  .headline {
-    font-size: 32px;
+  .lede {
+    font-size: 26px;
+  }
+  .takeaway {
+    -webkit-line-clamp: 5;
   }
   .rowLink {
     grid-template-columns: 1fr;

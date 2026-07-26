@@ -34,6 +34,13 @@ function reportPath(e: ManifestEntry): string {
   return `/r/${e.date}/${e.edition}`;
 }
 
+const MAX_FALLBACK_CHARS = 40;
+
+function displayLede(e: ManifestEntry): string {
+  if (e.lede) return e.lede;
+  return e.takeaway.slice(0, MAX_FALLBACK_CHARS).trim();
+}
+
 export default function Home() {
   const { status } = useManifest();
   if (status.kind !== "ready") return null;
@@ -60,7 +67,10 @@ export default function Home() {
             {EDITION_LABEL[latest.edition]} · {fullDate(latest.date)}
           </span>
         </div>
-        <h1 className={styles.headline}>{latest.takeaway}</h1>
+        <h1 className={styles.lede}>{displayLede(latest)}</h1>
+        {latest.lede && latest.takeaway && latest.takeaway !== latest.lede && (
+          <p className={styles.takeaway}>{latest.takeaway}</p>
+        )}
         <div className={styles.meta}>
           {isToday ? "今日" : "本期"}精选 <b>{latest.sourceCount}</b> 篇
         </div>
