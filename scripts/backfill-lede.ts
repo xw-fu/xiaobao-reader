@@ -9,6 +9,7 @@ interface BackfillReport {
 }
 
 const MAX_LEDE_CHARS = 40;
+const MIN_VIABLE_CHARS = 8;
 const STOP_CHARS = ["。", "！", "？", "!", "?"];
 const COMMA_CHARS = ["，", ","];
 
@@ -22,31 +23,48 @@ function* walk(dir: string): Generator<string> {
 }
 
 function deriveLede(takeaway: string): string {
+  // Strip leaked LLM chain-of-thought blocks (<think>...</think>) before slicing.
+  const cleaned = takeaway.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+  if (!cleaned) return "";
+
   // Take everything up to the first sentence-ending punctuation.
-  let endIdx = takeaway.length;
+  let endIdx = cleaned.length;
   for (const ch of STOP_CHARS) {
-    const i = takeaway.indexOf(ch);
+    const i = cleaned.indexOf(ch);
     if (i !== -1 && i < endIdx) endIdx = i;
   }
-  let lede = takeaway.slice(0, endIdx).trim();
+  let lede = cleaned.slice(0, endIdx).trim();
 
-  // If still over the cap, trim at the nearest comma within MAX_LEDE_CHARS.
+  // If still over the cap, trim at the nearest comma within MAX_LEDE_CHARS - 1.
   if (lede.length > MAX_LEDE_CHARS) {
     let trimAt = -1;
     for (const ch of COMMA_CHARS) {
       const i = lede.lastIndexOf(ch, MAX_LEDE_CHARS - 1);
       if (i > trimAt) trimAt = i;
     }
-    if (trimAt > 0) lede = lede.slice(0, trimAt).trim();
-    else lede = lede.slice(0, MAX_LEDE_CHARS).trim();
+    if (trimAt >= MIN_VIABLE_CHARS) lede = lede.slice(0, trimAt).trim();
+    else {
+      lede = lede.slice(0, MAX_LEDE_CHARS).trim();
+      // If the hard cut ends mid-token, back off to the last whitespace.
+      const lastAscii = /[A-Za-z0-9]$/.test(lede);
+      const prevAscii = lede.length >= 2 && /[A-Za-z0-9]/.test(lede[lede.length - 2]);
+      if (lastAscii && prevAscii) {
+        const ws = lede.search(/\s\S*$/);
+        if (ws > 0) lede = lede.slice(0, ws).trim();
+      }
+    }
   }
 
   return lede;
 }
 
 function injectLede(source: string, lede: string): string {
+  // Strip leaked LLM chain-of-thought blocks (<think>...</think>) from the
+  // source body — these were occasionally embedded in the 今日要点 block by
+  // upstream generation and must not survive in shipped reports.
+  const stripped = source.replace(/<think>[\s\S]*?<\/think>\s*/g, "");
   // Insert "## 概要\n\n<lede>\n\n" immediately after the H1 header line.
-  const lines = source.split("\n");
+  const lines = stripped.split("\n");
   const headerIdx = lines.findIndex((l) => l.startsWith("# "));
   if (headerIdx === -1) return source;
   const before = lines.slice(0, headerIdx + 1);

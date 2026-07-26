@@ -114,4 +114,37 @@ describe("backfillLede", () => {
     expect(lede.length).toBeLessThanOrEqual(40);
     expect(lede).not.toMatch(/[。！?]/); // trimmed before the full stop
   });
+
+  it("strips leaked <think>...</think> blocks before deriving the lede", () => {
+    mkdirSync(join(tmpRoot, "2026/06"), { recursive: true });
+    const src = [
+      "# 晓报 · 早报 — 2026-06-23",
+      "",
+      "*晚安！*",
+      "",
+      "## 今日要点",
+      "",
+      "<think>让我分析这5条新闻的共同主题： 1. Snowflake与Postgres的集成 2. ...</think>",
+      "本期核心内容围绕云计算与企业级AI集成展开，重点关注Snowflake数据库与AI工作流的协同方案。",
+      "",
+      "---",
+      "",
+      "## AI 前沿",
+      "",
+      "- **Foo**",
+      "- 📍 Bar · 6月23日 · [原文](https://example.com)",
+      "- 概要：x",
+      "- 影响：y",
+    ].join("\n");
+    const file = join(tmpRoot, "2026/06/23-evening.md");
+    writeFileSync(file, src);
+
+    backfillLede(tmpRoot);
+    const updated = readFileSync(file, "utf8");
+    expect(updated).not.toContain("<think>");
+    const ledeMatch = updated.match(/## 概要\n\n(.+?)\n\n## 今日要点/s);
+    expect(ledeMatch).not.toBeNull();
+    expect(ledeMatch![1]).not.toContain("<think>");
+    expect(ledeMatch![1].startsWith("本期核心内容")).toBe(true);
+  });
 });

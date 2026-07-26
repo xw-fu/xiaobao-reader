@@ -189,6 +189,19 @@ describe("parseLede", () => {
       "",
       "摘要正文",
       "",
+      "## 今日要点",
+      "",
+      "Some takeaway text.",
+      "",
+      "---",
+      "",
+      "## AI 前沿",
+      "",
+      "- **Foo**",
+      "- 📍 Bar · 5月19日 · [原文](https://example.com)",
+      "- 概要：x",
+      "- 影响：y",
+      "",
       "**数据漏斗 · Funnel**",
       "",
       "| 数据源 | 收集 | 过滤 | 治理 | 最终 |",
@@ -236,5 +249,17 @@ describe("parseLede", () => {
     ].join("\n");
     const e = parseManifestEntry(src, "/x.md");
     expect(e.lede).toBe("第一行摘要 第二行补充");
+  });
+});
+
+describe("parseTakeaway - skips ## 概要", () => {
+  const withLede = readFileSync(resolve(__dirname, "fixtures/with-lede.md"), "utf8");
+
+  it("parseTakeaway skips the ## 概要 block (lede lives in its own field)", () => {
+    const r = parseReport(withLede, "/reports/2026/05/19-morning.md");
+    // The fixture's ## 概要 is "AI 数据中心建设遭遇跨党派反对"; the ## 今日要点
+    // begins with "盖洛普民调显示...". parseTakeaway must skip the lede.
+    expect(r.takeaway).toMatch(/^盖洛普民调显示/);
+    expect(r.takeaway).not.toContain("AI 数据中心建设遭遇跨党派反对");
   });
 });

@@ -76,10 +76,15 @@ function parseLede(lines: string[]): string {
 }
 
 function parseTakeaway(lines: string[]): string {
-  // Collect all text from the first ## heading up to the content boundary.
+  // Collect all text from the first non-lede ## heading up to the content boundary.
   // Multiple sub-headings before the boundary (e.g. 今日亮点 + 明日关注) are all takeaway.
-  const firstH2 = findLineIndex(lines, (l) => l.startsWith("## "));
+  let firstH2 = findLineIndex(lines, (l) => l.startsWith("## "));
   if (firstH2 === -1) throw new ReportParseError("takeaway", 1, "missing takeaway section (no ## heading found)");
+  // Skip the ## 概要 block if present — its content lives in `lede`, not `takeaway`.
+  while (firstH2 !== -1 && lines[firstH2] === "## 概要") {
+    firstH2 = findLineIndex(lines, (l) => l.startsWith("## "), firstH2 + 1);
+  }
+  if (firstH2 === -1) throw new ReportParseError("takeaway", 1, "missing takeaway section after ## 概要");
   const endIdx = contentStartIndex(lines);
   const collected: string[] = [];
   for (let i = firstH2 + 1; i < endIdx; i++) {
