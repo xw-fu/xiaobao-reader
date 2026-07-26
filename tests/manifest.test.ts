@@ -73,4 +73,26 @@ describe("loadManifest", () => {
     );
     await expect(loadManifest()).rejects.toThrowError(/edition must be "morning" or "evening" or "health"/);
   });
+
+  it("stores empty string when entry omits the lede field", async () => {
+    server.use(
+      http.get("/reports/index.json", () =>
+        HttpResponse.json({
+          generatedAt: "2026-05-19T07:00:00Z",
+          entries: [
+            {
+              date: "2026-05-19",
+              edition: "morning",
+              title: "晓报 · 早报 — 2026-05-19",
+              takeaway: "x",
+              path: "/reports/2026/05/19-morning.md",
+              sourceCount: 1,
+            },
+          ],
+        }),
+      ),
+    );
+    const m = await loadManifest();
+    expect(m.entries[0].lede).toBe("");
+  });
 });

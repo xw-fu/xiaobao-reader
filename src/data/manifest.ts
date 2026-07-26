@@ -25,6 +25,7 @@ function validateEntry(raw: unknown, idx: number): ManifestEntry {
     date: o.date as string,
     edition: o.edition,
     title: o.title as string,
+    lede: typeof o.lede === "string" ? o.lede : "",
     takeaway: o.takeaway as string,
     path: o.path as string,
     sourceCount: o.sourceCount,
