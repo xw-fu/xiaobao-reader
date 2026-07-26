@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-07-26T04:02:10.014Z",
+  "generatedAt": "2026-07-26T12:04:28.876Z",
   "entries": [
+    {
+      "date": "2026-07-26",
+      "edition": "evening",
+      "title": "晓报 · 晚报 — 2026-07-26",
+      "lede": "",
+      "takeaway": "InfoQ Summit 2026 发布主题演讲，探讨如何将 AI 从抽象概念落地为工作流中的实际工具，帮助团队突破效率瓶颈。 向量数据库厂商 Zilliz 在 AICon 深圳站分享其以 AI Agent 为核心的 Agentic-Native 增长策略，支撑业务超线性扩张。",
+      "path": "/reports/2026/07/26-evening.md",
+      "sourceCount": 3
+    },
     {
       "date": "2026-07-26",
       "edition": "morning",
