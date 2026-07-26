@@ -32,6 +32,9 @@ export function ReportView({ report, availableEditions, onEditionChange }: Props
           <span>{report.meta.date}</span>
         </div>
         <h1 className={styles.title}>{report.meta.title}</h1>
+        {report.meta.lede && (
+          <p className={styles.subtitle}>{report.meta.lede}</p>
+        )}
       </header>
 
       <EditionTabs
