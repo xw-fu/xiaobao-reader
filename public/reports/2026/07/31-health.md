@@ -4,98 +4,90 @@
 
 ## 今日亮点
 
-本期速览聚焦健康与可穿戴领域两条主线：其一，摩根大通下调苹果目标价并提示硬件供应紧张，iPhone与Apple Watch的产能瓶颈可能延后穿戴式健康监测功能的全球普及节奏，同时iCloud+正成为Apple Intelligence及衍生健康AI服务的潜在计费载体，推动数字健康商业模式由硬件一次性销售向订阅化转型；其二，两项临床研究分别提示在儿科哮喘人群中纳入嗜酸性食管炎筛查的诊断价值，以及Atezolizumab联合方案在dMMR转移性结直肠癌一线治疗中将疾病进展风险降低58%的循证进展，二者均指向伴随诊断与数字病理AI工具的临床需求增长。综合来看，供应链约束下的硬件铺货节奏、订阅化的健康AI变现路径，以及共病筛查与免疫联合治疗所驱动的诊断工具升级，是本期读者在产业、临床与监管层面最值得持续跟踪的议题。
+本期速览聚焦健康与可穿戴生态在数据底座、监管框架和器械安全三个维度的共性议题：苹果云服务体系的演进关乎可穿戴健康数据的长期同步与隐私保护，而 AI 医学影像的治理框架正成为数字疗法与 AI 诊断产品通过 FDA 审批、实现医保覆盖的关键门槛；与此同时，Stryker 遭遇的网络攻击事件提示医疗设备厂商与医院须重新审视上市后网络安全韧性，或将推动监管强化与采购标准升级。综合来看，临床有效性、合规治理与运营安全正共同塑造下一阶段数字健康与可穿戴产业的准入门槛。
 
 ## 明日关注
 
-苹果计划将Apple Intelligence的算力成本与iCloud+订阅档位绑定，按用户等级分配每日AI请求额度，目前AI变现尚无其他明确路径。
+文章回顾苹果从 iTools、.Mac 到 MobileMe 再到 iCloud 的订阅服务演进历程，展示其逾十年构建云服务底座的历程。
 
 ---
 
 ## 可穿戴硬件
 
-- **JP Morgan lowers Apple price target on supply constraint worries, still bullish long-term**
-- 📍 AppleInsider · 7月31日 · [原文](https://appleinsider.com/articles/26/07/31/jp-morgan-lowers-apple-price-target-on-supply-constraint-worries-still-bullish-long-term?utm_source=rss)
-- 概要：摩根大通下调苹果目标股价至340美元，原因是供应链（尤其是内存）受限将短期拖累营收，但维持长期看涨评级。
-- 影响：供应链瓶颈若持续，可能延后Apple Watch及iPhone健康功能的全球铺货节奏，间接影响可穿戴新品在医疗生态中的市场覆盖时间表，对依赖苹果硬件平台的数字健康合作伙伴构成短期不确定性。
-- **Apple AI compute costs will be covered by iCloud+ subscriptions, for now**
-- 📍 AppleInsider · 7月31日 · [原文](https://appleinsider.com/articles/26/07/31/apple-ai-compute-costs-will-be-covered-by-icloud-subscriptions-for-now?utm_source=rss)
-- 概要：苹果计划将Apple Intelligence的算力成本与iCloud+订阅档位绑定，按用户等级分配每日AI请求额度，目前AI变现尚无其他明确路径。
-- 影响：iCloud+成为苹果AI健康功能（如健康数据智能分析、Siri医疗问答）的潜在计费载体，可能促使数字健康服务从一次性硬件销售转向持续订阅模式，但若AI成本难以覆盖，长期或影响健康功能的免费可用性与临床可靠性。
-- **High iPhone demand won't be met by supply during September quarter**
-- 📍 AppleInsider · 7月31日 · [原文](https://appleinsider.com/articles/26/07/30/high-iphone-demand-wont-be-met-by-supply-during-september-quarter?utm_source=rss)
-- 概要：苹果预计2026年9月季度iPhone、iPad及Mac仍将因供应短缺无法满足强劲需求，营收增长因此受限。
-- 影响：硬件供应紧张意味着Apple Watch等可穿戴健康设备的换新与新增用户增速放缓，可能延迟健康监测功能在消费端的普及，同时也为安卓阵营可穿戴厂商切入健康功能市场留出窗口期。
-- **Apple reports third quarter results**
-- 📍 Apple Newsroom · 7月31日 · [原文](https://www.apple.com/newsroom/2026/07/apple-reports-third-quarter-results/)
-- 概要：苹果公司发布2026财年第三季度财报，披露包括Apple Watch及健康相关服务在内的业务表现。
-- 影响：苹果季度业绩是消费级可穿戴健康设备市场的重要风向标，其中Apple Watch的心率、心电、血氧及睡眠监测功能持续推动可穿戴医疗数据的临床可信度讨论，其健康服务营收变化也将影响数字健康生态的商业模式走向。
-- **Baxter’s shares soar by 17% after reporting positive Q2**
-- 📍 Medical Device Network · 7月30日 · [原文](https://www.medicaldevice-network.com/news/baxter-shares-soar-by-17-after-reporting-positive-q2/)
-- 概要：医疗设备制造商Baxter公布2026年第二季度业绩，利润同比增长5%，股价应声上涨17%，业绩反弹部分得益于去年北卡罗来纳州飓风损毁工厂的低基数效应。
-- 影响：Baxter业绩回暖反映医院端输液、透析等耗材需求企稳，对依赖医院渠道的可穿戴监测设备和数字健康解决方案的市场环境构成利好信号，提示医疗器械供应链正逐步走出灾害和疫情造成的波动周期。
-- **CoreMap raises $37m in Medtronic-led financing round**
-- 📍 Medical Device Network · 7月30日 · [原文](https://www.medicaldevice-network.com/news/coremap-raises-37m-in-medtronic-led-financing-round/)
-- 概要：心脏电生理诊断公司 CoreMap 完成 3700 万美元融资，由医疗器械巨头美敦力领投。该轮融资使公司自 2016 年成立以来累计融资额接近翻倍。
-- 影响：美敦力领投显示出大型器械厂商正通过战略投资布局心脏电生理精准诊断领域。CoreMap 的技术若与美敦力的消融治疗产品线结合，可形成"诊断+治疗"闭环，对房颤等心律失常患者的临床决策路径产生直接影响。
-- **VDyne treats first patient in TRIVITA trial of TriNova system**
-- 📍 Medical Device Network · 7月30日 · [原文](https://www.medicaldevice-network.com/news/vdyne-treats-first-patient-trivita-trial/)
-- 概要：结构性心脏病器械公司 VDyne 宣布在美国 IDE 关键性试验 TRIVITA 中完成首例患者入组与手术，评估其 TriNova 经导管三尖瓣置换（TTVR）系统的安全性与有效性。
-- 影响：TTVR 是当前三尖瓣反流介入治疗的前沿方向，全球尚无获批产品。TRIVITA 试验的启动标志着该领域进入关键数据积累期，若结果积极，将填补三尖瓣外科高危患者的治疗空白，重构三尖瓣介入治疗市场格局。
-- **Trace secures funding from Axogen for nerve imaging technology**
-- 📍 Medical Device Network · 7月30日 · [原文](https://www.medicaldevice-network.com/news/trace-funding-axogen-nerve-imaging-technology/)
-- 概要：神经成像技术公司 Trace Biosciences 获得来自周围神经修复企业 Axogen 的战略投资，用于推进其 Nerve Trace 神经特异性成像技术的开发。
-- 影响：神经特异性成像技术若实现临床转化，可在术中实时识别神经结构，显著提升周围神经修复手术的精准度与安全性。对 Axogen 而言，这项投资意味着从单纯的产品供应向"成像引导+修复器械"的整合解决方案延伸，可能改变周围神经外科的术式标准。
+- **Rosenblatt hikes AAPL to $300 on expected iPhone 18 demand, still underwater**
+- 📍 AppleInsider · 7月31日 · [原文](https://appleinsider.com/articles/26/07/31/rosenblatt-hikes-aapl-to-300-on-expected-iphone-18-demand-still-underwater?utm_source=rss)
+- 概要：Rosenblatt 证券将苹果 AAPL 目标价上调至 300 美元，但该价格仍低于当前股价，反映其对供应链问题及难以复制 iPhone 17 系列成功持谨慎态度，并预期 iPhone 18 需求将回升。
+- 影响：该分析主要影响苹果消费电子业务预期，对其健康可穿戴业务（如 Apple Watch）有间接影响——若 iPhone 销量承压，Apple Watch 新功能依赖 iPhone 生态，捆绑销售策略可能受阻，对医疗健康场景下的可穿戴数据同步带来不确定性。
+- **From iTools to iCloud: Apple's first foray into Software as a Service**
+- 📍 AppleInsider · 7月31日 · [原文](https://appleinsider.com/articles/26/07/31/from-itools-to-icloud-apples-foray-into-subscriptions-as-a-service?utm_source=rss)
+- 概要：文章回顾苹果从 iTools、.Mac 到 MobileMe 再到 iCloud 的订阅服务演进历程，展示其逾十年构建云服务底座的历程。
+- 影响：对健康领域意义在于：iCloud 作为 Apple Health、健康数据备份及跨设备同步的基础设施，其稳定性直接影响用户的健康数据长期存储与隐私保护策略，是苹果可穿戴与数字健康生态的关键支柱。
+- **AI in medical imaging: the key tenets of an effective governance strategy**
+- 📍 Medical Device Network · 7月31日 · [原文](https://www.medicaldevice-network.com/features/ai-in-medical-imaging-the-key-tenets-of-an-effective-governance-strategy/)
+- 概要：随着 AI 在医学影像领域应用日益广泛，监管与公众对其开发、部署和持续监测的审查趋严，行业开始呼吁建立系统化的 AI 治理框架。
+- 影响：对医疗器械厂商和医院至关重要：有效的 AI 治理可降低模型漂移、偏倚和临床误诊风险，决定 AI 影像产品能否顺利通过 FDA 审批并被医保覆盖，是数字疗法和 AI 诊断工具商业化落地的关键门槛。
+- **Stryker nets $6.6bn revenue in Q2; highlights resilience following cyberattack**
+- 📍 Medical Device Network · 7月31日 · [原文](https://www.medicaldevice-network.com/news/stryker-nets-6-bn-revenue-in-q2-highlights-resilience-following-cyberattack/)
+- 概要：医疗科技公司 Stryker 公布第二季度营收 66 亿美元，强调在 2026 年 3 月遭受全球性网络攻击导致运营中断后已展现业务韧性。
+- 影响：凸显医疗设备制造商面临的网络安全风险：对医院而言，器械软件瘫痪可直接影响手术排程与患者安全，将倒逼 FDA 强化医械上市后的网络安全要求，并推动医院优先采购具备快速恢复能力的厂商产品。
+- **FDA clears Total Flow Medical cannula for cardiopulmonary bypass**
+- 📍 Medical Device Network · 7月31日 · [原文](https://www.medicaldevice-network.com/news/fda-clears-total-flow-medical-cannula/)
+- 概要：Total Flow Medical 获得 FDA 510(k) 上市许可，其股动脉插管产品可用于心肺转流手术。
+- 影响：为心脏外科医生提供新的器械选择，丰富了体外循环耗材市场，可能降低单台手术耗材成本；对患者而言，更精简的插管设计有助于减少血管并发症，提升高风险心脏手术的安全性。
+- **Median Technologies and Olea sign partnership for lung cancer device**
+- 📍 Medical Device Network · 7月31日 · [原文](https://www.medicaldevice-network.com/news/median-technologies-olea-lung-cancer-device/)
+- 概要：法国医疗影像 AI 公司 Median Technologies 与 Olea Medical 签署合作协议，借助 Olea 在美欧的销售渠道推动其 eyonis LCS 肺癌筛查软件商业化。
+- 影响：eyonis LCS 是基于 AI 的低剂量 CT 肺结节分析工具，已获 FDA 510(k) 认证。Olea 在神经和肿瘤影像领域积累的客户网络可加速产品进入医院放射科。该合作体现 AI 影像企业从自建渠道转向借助成熟分销伙伴的模式，有助于降低商业化成本并加速早期肺癌筛查在基层的普及。
 
 ## 数字健康研究
 
-- **Eosinophilic esophagitis prevalence may be higher than thought in pediatric patients with asthma**
-- 📍 Medical Xpress · 7月31日 · [原文](https://medicalxpress.com/news/2026-07-eosinophilic-esophagitis-prevalence-higher-thought.html)
-- 概要：一项发表在《过敏与临床免疫学杂志：在实践中》的研究显示，在儿科哮喘门诊中筛查嗜酸性粒细胞性食管炎（EoE），可发现的患儿数量多于既往认知。
-- 影响：该研究支持将EoE筛查纳入哮喘儿童的常规评估流程，可能改变儿科过敏疾病的诊断路径；早期识别有助于避免食管重塑等不可逆损伤，对数字筛查工具和哮喘共病管理平台的开发具有临床需求驱动意义。
-- **Combination therapy improves progression-free survival for patients with metastatic dMMR colorectal cancer**
-- 📍 Medical Xpress · 7月31日 · [原文](https://medicalxpress.com/news/2026-07-combination-therapy-free-survival-patients.html)
-- 概要：Ⅲ期临床数据显示，atezolizumab联合改良FOLFOX6及贝伐珠单抗治疗dMMR/MSI-H转移性结直肠癌，使患者疾病进展或死亡风险降低58%。
-- 影响：该方案为dMMR/MSI-H晚期结直肠癌的一线免疫联合治疗提供了高级别循证支持，可能改写NCCN等指南推荐；同时也提示伴随诊断（如MSI检测）的临床需求上升，对相关分子诊断产品及数字病理AI工具的市场具有拉动作用。
-- **Researchers call for urgent overhaul of pain care amid opioid crisis**
-- 📍 Medical Xpress · 7月31日 · [原文](https://medicalxpress.com/news/2026-07-urgent-overhaul-pain-opioid-crisis.html)
-- 概要：英国阿伯丁大学研究人员发表立场文件，警告英国阿片类药物使用障碍问题"规模巨大且可能被低估"，呼吁对疼痛治疗体系进行紧急改革，否则阿片类成瘾及相关死亡人数将继续上升。
-- 影响：该立场文件直接挑战当前以阿片类药物为主的慢性疼痛管理模式，可能推动英国NHS重新评估镇痛指南，并为数字疼痛管理工具（如可穿戴神经刺激设备、行为疗法APP）创造临床应用空间，加速非药物替代疗法的医保覆盖进程。
-- **Mental distress, fatigue common in childhood survivors of leukemia, lymphoma**
-- 📍 Medical Xpress · 7月31日 · [原文](https://medicalxpress.com/news/2026-07-mental-distress-fatigue-common-childhood.html)
-- 概要：发表于《Current Oncology》的研究显示，童年急性淋巴细胞白血病、急性髓系白血病及非霍奇金淋巴瘤的成年幸存者中，心理健康困扰、慢性疲劳和执行功能损害发生率显著偏高。
-- 影响：研究揭示了儿童癌症长期幸存者的神经心理后遗症负担，为肿瘤幸存者随访门诊引入远程认知评估、可穿戴疲劳监测和数字心理健康干预提供了循证依据，将推动儿童肿瘤康复向长期慢病管理模式转变。
-- **FDA approves Simtriyo for treating ADHD in children and adults**
-- 📍 Medical Xpress · 7月31日 · [原文](https://medicalxpress.com/news/2026-07-fda-simtriyo-adhd-children-adults.html)
-- 概要：美国FDA批准Simtriyo（centanafadine）用于治疗6岁及以上、体重≥20公斤的儿童及成人注意缺陷多动障碍（ADHD）。
-- 影响：centanafadine是一款非典型安非他命类药物，作为ADHD新治疗选项扩充了儿科和成人用药池，可能改变一线用药格局；同时该适应症的扩展将促进配套数字治疗、注意力监测可穿戴设备的联合开发与临床验证。
-- **STAT+: Rising oil prices can boost the cost of some medicines. One expert says it’s time to lower reliance on fossil fuels**
-- 📍 STAT Pharma · 7月30日 · [原文](https://www.statnews.com/pharmalot/2026/07/30/rising-oil-prices-cost-of-medicines-fosil-fuels/?utm_campaign=rss)
-- 概要：联合国健康融资机构 Unitaid 分析显示，石油价格上涨可能推高部分药品的生产成本，其中以一款广泛使用的 HIV 药物受影响最为明显。专家呼吁医药行业降低对化石燃料原材料的依赖。
-- 影响：药品成本与石油价格挂钩意味着供应链冲击可能直接推高抗病毒药物价格，对中低收入国家 HIV 患者用药可及性构成威胁。这促使药品制造商需评估原料替代方案，对仿制药厂商和全球公共卫生采购体系的长期成本控制策略产生直接影响。
-- **STAT+: Pharmalittle: We’re reading about an FDA panel nixing a Duchenne drug, FTC suing Hims & Hers, and more**
-- 📍 STAT Pharma · 7月30日 · [原文](https://www.statnews.com/pharmalot/2026/07/30/fda-panel-nixes-duchenne-drug-ftc-sues-hims-and-hers/?utm_campaign=rss)
-- 概要：FDA 顾问委员会投票认定 Capricor 公司用于治疗杜氏肌营养不良症的药物临床数据未能提供疗效的"实质性证据"，对该药获批前景构成打击；此外，FTC 对远程医疗平台 Hims & Hers 提起诉讼。
-- 影响：此次 FDA 顾问委员会的否定意见反映出监管层对罕见病药物临床证据标准的收紧，可能延缓 DMD 创新疗法的上市路径，并影响其他采用替代终点的基因/细胞治疗申报策略。FTC 起诉 Hims & Hers 则显示监管机构开始强化对直接面向消费者远程处方模式的审查。
-- **Abortion Drug Law in Louisiana Heightens Hemorrhage Risk for Pregnant Patients**
-- 📍 KFF Health News · 7月30日 · [原文](https://kffhealthnews.org/courts/abortion-drug-access-misoprostol-louisiana-law-pregnancy-hemorrhage-risk/)
-- 概要：美国路易斯安那州2024年立法将米非司酮和米索前列醇重新列为管制药物，导致医院在非流产相关的产后大出血等产科急救场景中获取上述药物的程序更加复杂，其他州正考虑跟进类似立法。
-- 影响：米索前列醇是全球产后出血一线急救药物，受管制后医院药房库存和紧急调配时间可能延长，直接增加产妇大出血时的死亡风险。该案揭示了药物管制政策与产科急救之间的临床冲突，或促使产科指南更新替代方案，并推动围产期急救药品供应链管理的政策讨论。
+- **The Newest Federally Recognized Tribe Wants Better Healthcare. It May Be On Its Own.**
+- 📍 KFF Health News · 7月31日 · [原文](https://kffhealthnews.org/rural-health/tribe-native-disparities-indian-health-service-federal-recognition-lumbee-north-carolina/)
+- 概要：北卡罗来纳州卢姆比部落获得联邦承认后，面临罗伯逊县严重的健康差距问题，该县在美国健康不公平指标中排名垫底，部落领导人需自行决策医疗服务体系建设。
+- 影响：联邦承认使卢姆比部落有资格申请印第安健康服务（IHS）资金，但实际拨款取决于国会划拨。该部落所在区域糖尿病、心脏病、婴儿死亡率显著高于全国均值，凸显农村少数族裔医疗可及性差距。新建医疗体系需从零搭建，考验部落自主管理能力，为其他寻求联邦承认的部落提供治理参照。
+- **They Worked To Protect Public Health. Now They Want the Public’s Votes.**
+- 📍 KFF Health News · 7月31日 · [原文](https://kffhealthnews.org/elections/election-midterms-candidates-becerra-acton-el-sayed-california-ohio-michigan/)
+- 概要：多位前公共卫生官员，包括加州前卫生部长戴维斯、密歇根州前首席医疗执行官赫勒尔等人，今年以公共卫生履历为竞选卖点，参选州长或参议员。
+- 影响：公共卫生官员从幕后走向竞选前台，反映新冠疫情后公众对卫生政策制定者的关注度提升，也意味着疫苗政策、ACA 平价医疗法案、铅污染防控等议题将进入选举核心讨论。若当选，医学背景的立法者可能推动更严格的药品审批和疾病预防预算，影响未来州级医改走向。
+- **Bringing a more personalized approach to alcohol treatment: Q&A**
+- 📍 Medical Xpress · 7月31日 · [原文](https://medicalxpress.com/news/2026-07-personalized-approach-alcohol-treatment-qa.html)
+- 概要：Medical Xpress 发布专访，探讨针对酒精使用障碍（AUD）的个体化治疗新思路，挑战传统完全戒断的单一目标，介绍根据患者基因、生物标志物和心理特征定制方案的最新进展。
+- 影响：个体化方案将拓展数字疗法和可穿戴戒酒监测设备的应用场景，为戒断药物（如纳曲酮、纳美芬）精准用药提供依据。对临床医生而言，需重新评估 AUD 治疗路径，从一刀切转向分层管理，有助于提高治疗依从性并覆盖此前被忽视的中度患者群体。
+- **Gluten-free diet reshapes gut bacteria after celiac diagnosis in children**
+- 📍 Medical Xpress · 7月31日 · [原文](https://medicalxpress.com/news/2026-07-gluten-free-diet-reshapes-gut.html)
+- 概要：新研究显示，儿童确诊乳糜泻后采用无麸质饮食可在数月内显著重塑肠道菌群组成，部分菌群变化与症状缓解相关，但远未恢复至健康儿童水平。
+- 影响：该研究为乳糜泻的菌群-免疫互作机制提供新证据，支持益生菌或粪菌移植作为饮食疗法的辅助手段。对儿科消化科医生而言，结果提示应监测患儿肠道菌群恢复情况并评估长期干预必要性，也为开发靶向微生物组疗法提供了潜在生物标志物。
+- **People with frailty explain what they really want from digital health tools**
+- 📍 Medical Xpress · 7月31日 · [原文](https://medicalxpress.com/news/2026-07-people-frailty-digital-health-tools.html)
+- 概要：澳大利亚弗林德斯大学Caring Futures Institute的研究者Adeline Lau指出，处于衰弱前期和衰弱期的老年人易发生营养不良，却缺乏量身定制、权威且易获取的营养教育。该团队聚焦于数字健康工具如何满足这一群体的实际需求。
+- 影响：研究直接回应了老年数字健康领域长期被忽视的可用性鸿沟——现有营养App多面向年轻健康人群，对衰弱老年人的认知负荷、操作门槛适配不足。结论将指导数字健康产品从'通用化'转向'适老化+临床场景化'设计，为面向居家养老的数字营养干预工具提供循证需求框架。
+- **Mighty mitochondria: Scientists uncover new role for fighting bacterial infections, including drug-resistant superbugs**
+- 📍 Medical Xpress · 7月31日 · [原文](https://medicalxpress.com/news/2026-07-mighty-mitochondria-scientists-uncover-role.html)
+- 概要：科学家发现线粒体在对抗细菌感染（包括耐药超级细菌）中扮演新角色，揭示这类细胞能量工厂不只供能，还参与免疫防御机制，为应对抗生素耐药性提供了潜在新靶点。
+- 影响：对医疗领域而言，该发现指向通过增强宿主细胞免疫而非直接杀菌来对抗耐药菌的新路径，可能催生针对线粒体功能的新型抗感染疗法。在可穿戴与数字健康层面，线粒体活性指标未来有望成为感染预警或免疫力评估的连续监测生物标志物。
+- **Long COVID and immune 'soldier' cells: Q&A**
+- 📍 Medical Xpress · 7月31日 · [原文](https://medicalxpress.com/news/2026-07-covid-immune-soldier-cells-qa.html)
+- 概要：科普文章以问答形式介绍长新冠症状（极度疲劳、心率加快、呼吸困难、思维迟钝、关节疼痛）及其与免疫'士兵'细胞的关系，强调长新冠症状多样、变化无常且尚无标准治疗方案。
+- 影响：对数字健康领域意义在于：长新冠的多系统、多变症状特点使其成为可穿戴设备连续监测的重要应用场景——心率变异性、血氧、活动量等指标可用于客观量化疾病波动。该科普也有助于推动数字疗法开发商将免疫细胞指标纳入症状追踪产品设计。
+- **Listen to the Latest ‘KFF Health News Minute’**
+- 📍 KFF Health News · 7月30日 · [原文](https://kffhealthnews.org/news/listen-kff-health-news-minute-2026/)
+- 概要：KFF Health News发布最新一期《Health News Minute》广播节目，汇总近期美国医疗与健康政策新闻报道。
+- 影响：该节目为美国健康政策动态的常规传播渠道，本身不涉及具体临床或产品创新。读者可通过其追踪影响数字健康产业的关键政策风向，如远程医疗报销、数据隐私法规与医保覆盖范围变化。建议关注具体期数内容而非节目发布本身。
 
 
 **数据漏斗 · Funnel**
 
-- 收集：63 · 过滤：30 · 去重：16 · 治理：16 · 最终：16
+- 收集：60 · 过滤：30 · 去重：16 · 治理：14 · 最终：14
 
 | 数据源 | 收集 | 过滤 | 治理 | 最终 |
 | ------ | ----: | ----: | ----: | ----: |
-| digital_health_research | 9 | 1 | 8 | 8 |
-| wearable_tech | 8 | 19 | 8 | 8 |
+| digital_health_research | 8 | 2 | 8 | 8 |
+| wearable_tech | 6 | 17 | 6 | 6 |
 | company_specific | 0 | 8 | 0 | 0 |
-| healthcare_ecosystem | 0 | 2 | 0 | 0 |
+| healthcare_ecosystem | 0 | 3 | 0 | 0 |
 
 ---
 
 *记得动一动、喝杯水，下午继续。*
 
-模型：minimax-portal/MiniMax-M3 · 条目：16 · 过滤：0 · 治理：1 · AI/规则enriched：16/0 · 生成时间：2026-07-31T04:02:40.085709+00:00
+模型：minimax-portal/MiniMax-M3 · 条目：14 · 过滤：0 · 治理：0 · AI/规则enriched：14/0 · 生成时间：2026-07-31T12:30:25.885592+00:00
