@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-07-30T12:06:15.599Z",
+  "generatedAt": "2026-07-31T01:30:45.249Z",
   "entries": [
+    {
+      "date": "2026-07-31",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-07-31",
+      "lede": "",
+      "takeaway": "本期要闻聚焦科技行业的两条主线：一是AI与平台生态的走向，扎克伯格再次强调AI技术普惠化与开放生态，预示着开源阵营对闭源厂商的竞争压力将持续上升；二是Apple体系的多项更新与新机制，从iOS/macOS过渡版系统补丁，到更克制的应用通知设计，再到租赁升级计划替代原有iPhone Upgrade Program，提示开发者和用户在关注安全兼容与用户体验的同时，也需重新评估硬件获取方式与产品适配周期。",
+      "path": "/reports/2026/07/31-morning.md",
+      "sourceCount": 11
+    },
     {
       "date": "2026-07-30",
       "edition": "evening",
