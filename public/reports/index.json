@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-08-02T12:31:01.391Z",
+  "generatedAt": "2026-08-03T00:31:20.146Z",
   "entries": [
+    {
+      "date": "2026-08-03",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-08-03",
+      "lede": "",
+      "takeaway": "本期要闻集中在 AI 工具与方法的实践边界：从 Anthropic 团队用自家 Agent 重写 Claude 应用的真实测试，到多智能体专家团队架构成为 LLM 应用设计的主流范式，再到企业级 Data Agent 将数据基础设施与 AI 推理融合的工程探索，共同指向 AI 落地从概念走向工程化的关键拐点。与此同时，数学视角下的全纯函数与 Runge-Kutta 阶条件等理论进展，为科学计算提供了统一算法基础和高阶数值方法的组合分析工具，提示理论抽象对工程效率的长期价值。",
+      "path": "/reports/2026/08/03-morning.md",
+      "sourceCount": 6
+    },
     {
       "date": "2026-08-02",
       "edition": "morning",
