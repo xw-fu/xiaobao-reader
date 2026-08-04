@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-08-03T12:31:14.260Z",
+  "generatedAt": "2026-08-04T00:31:44.497Z",
   "entries": [
+    {
+      "date": "2026-08-04",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-08-04",
+      "lede": "",
+      "takeaway": "本期要闻呈现出两条主线：一边是开发者工具与企业 AI 集成的持续演进，Claude Code 推出新版本聚焦调试体验与凭据安全，WorkOS 则系统比较了 MCP 与 REST 在 Agent 接入场景下的取舍，提示 API 架构选型正面临新标准；另一边围绕苹果展开，从召回资深硬件高管到被曝用 iCloud 同步机密文件，反映出其在 AI 战略下人才与数据治理的双重压力。此外，科技评论领域迎来一个时代节点的告别，为读者回望互联网叙事提供了独特的观察窗口。",
+      "path": "/reports/2026/08/04-morning.md",
+      "sourceCount": 16
+    },
     {
       "date": "2026-08-03",
       "edition": "morning",
