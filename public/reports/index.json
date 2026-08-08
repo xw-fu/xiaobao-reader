@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-08-07T12:29:54.790Z",
+  "generatedAt": "2026-08-08T00:30:19.832Z",
   "entries": [
+    {
+      "date": "2026-08-08",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-08-08",
+      "lede": "",
+      "takeaway": "本期要闻聚焦 Claude Code 的多项更新：从支持自托管运行环境到 Auto 模式成为 Pro、Max 与 Team 套餐的默认选项，再到生产环境下的运维实践分享，整体反映出 Anthropic 正推动 Claude Code 从工具试验阶段迈向企业级规模化落地；同时，App Store 对浏览器类应用的审核收紧，以及独立博主对技术写作方法的讨论，则为开发者评估平台政策与建立个人技术影响力提供了值得参考的视角。",
+      "path": "/reports/2026/08/08-morning.md",
+      "sourceCount": 25
+    },
     {
       "date": "2026-08-07",
       "edition": "morning",
