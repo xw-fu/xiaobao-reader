@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-08-14T12:30:03.959Z",
+  "generatedAt": "2026-08-15T00:29:51.965Z",
   "entries": [
+    {
+      "date": "2026-08-15",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-08-15",
+      "lede": "",
+      "takeaway": "本期要闻集中在 AI 工具落地与终端生态两条主线：Claude Code 通过版本更新与官方使用指南，进一步完善了在多平台协作和企业合规场景中的可用性；与此同时，Windows on ARM 的底层兼容方案与 iPhone 硬件材料细节为开发者提供了实操参考。值得注意的是，AI 生成内容在品牌文档中暴露的质量问题也提醒业界，人工审核仍是技术内容生产中不可省略的环节。",
+      "path": "/reports/2026/08/15-morning.md",
+      "sourceCount": 17
+    },
     {
       "date": "2026-08-14",
       "edition": "morning",
