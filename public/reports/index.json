@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-08-15T12:30:15.030Z",
+  "generatedAt": "2026-08-16T00:31:19.610Z",
   "entries": [
+    {
+      "date": "2026-08-16",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-08-16",
+      "lede": "",
+      "takeaway": "文章从概率角度分析纠错码的纠错能力，探讨纠错码能可靠恢复原始数据的错误比例条件。",
+      "path": "/reports/2026/08/16-morning.md",
+      "sourceCount": 9
+    },
     {
       "date": "2026-08-15",
       "edition": "morning",
