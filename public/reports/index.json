@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-08-16T12:28:45.640Z",
+  "generatedAt": "2026-08-17T00:30:52.031Z",
   "entries": [
+    {
+      "date": "2026-08-17",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-08-17",
+      "lede": "",
+      "takeaway": "本期高关注度新闻集中于 Anthropic 在 Claude 文本中嵌入水印的争议，多方观点指出该技术既损害写作表达，也可能难以满足监管的实质要求。与此同时，AI 行业人事与公司治理话题也进入读者视野，The Information 对 Anthropic 高管家属的深度报道引发讨论；科技政策方面，美国政府对中国存储芯片的立场继续影响苹果等企业的供应链选择；AI 创作领域则再度聚焦生成式工具如何重塑工作方式与安全边界。",
+      "path": "/reports/2026/08/17-morning.md",
+      "sourceCount": 13
+    },
     {
       "date": "2026-08-16",
       "edition": "morning",
