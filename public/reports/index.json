@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-08-17T12:29:11.752Z",
+  "generatedAt": "2026-08-18T00:31:34.079Z",
   "entries": [
+    {
+      "date": "2026-08-18",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-08-18",
+      "lede": "",
+      "takeaway": "本期要闻呈现两条主线：AI 能力落地仍受制于合规与平台执行节奏，欧盟用户迟迟无法体验 Apple Intelligence 增强版 Siri，Apple TV 原创剧档期再度延宕，凸显大型企业在 AI 服务全球化和内容供给层面的推进迟缓；与此同时，AI 基础设施层正加速精细化演进，从 Claude Code 增强多租户会话隔离、到 alloca 栈内存机制的底层解析、再到 Snowflake 将 FinOps 理念引入 AI 工作负载成本治理，行业正围绕开发效率、运行透明度与算力可计量性持续夯实工程基础。读者可重点关注 AI 服务部署的区域差异策略、多会话环境的配置管理实践，以及面向 GPU 与 Token 计费的成本观测体系建设。",
+      "path": "/reports/2026/08/18-morning.md",
+      "sourceCount": 18
+    },
     {
       "date": "2026-08-17",
       "edition": "morning",
