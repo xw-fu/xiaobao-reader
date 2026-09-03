@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-09-02T12:29:38.574Z",
+  "generatedAt": "2026-09-03T00:31:34.908Z",
   "entries": [
+    {
+      "date": "2026-09-03",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-09-03",
+      "lede": "",
+      "takeaway": "本期要闻围绕智能体落地与跨端协同展开：Anthropic 与 OpenAI 分别从商业智能体的架构设计和实际业务自动化入手，展示了 AI 在电商、运营等场景中的效率提升路径；同时 Claude Code 新版本带来托管配置与权限管理更新，iOS 27 的设备接续功能则为跨端体验提供新的支撑。读者可重点关注企业级智能体的工具协作、权限边界与多端一致性如何协同落地。",
+      "path": "/reports/2026/09/03-morning.md",
+      "sourceCount": 17
+    },
     {
       "date": "2026-09-02",
       "edition": "morning",
