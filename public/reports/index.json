@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-09-05T12:29:54.642Z",
+  "generatedAt": "2026-09-06T00:30:06.600Z",
   "entries": [
+    {
+      "date": "2026-09-06",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-09-06",
+      "lede": "",
+      "takeaway": "本期高评分要闻呈现两大共性主题：一是大模型架构与部署成本的技术突破，包括消费级显卡本地运行 35B 参数模型，以及循环 Transformer 成为新架构方向；二是数学与人文领域的参考性内容。读者最应关注 FreeToken 降低大模型部署门槛的实际进展，以及 GPT-6 引发循环 Transformer 热潮背后中国厂商在底层架构上的早期布局。",
+      "path": "/reports/2026/09/06-morning.md",
+      "sourceCount": 12
+    },
     {
       "date": "2026-09-05",
       "edition": "morning",
