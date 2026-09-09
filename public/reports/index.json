@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-09-08T12:30:07.487Z",
+  "generatedAt": "2026-09-09T00:30:45.819Z",
   "entries": [
+    {
+      "date": "2026-09-09",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-09-09",
+      "lede": "",
+      "takeaway": "本期要闻集中在 AI 平台工程能力与前沿科研进展两个方向。Anthropic 推出 Claude 平台的成本与性能优化，同时 Claude Code 修复网关回归问题，显示出 API 生态在稳定性与单位经济上的持续打磨；OpenAI 则展示 GPT-5.6 联合 Codex 自主运行量子计算实验，让 AI 智能体从代码生成迈入真实实验操作环节。纳维-斯托克斯方程若获证实为真，将重塑流体力学与计算仿真的数学基础，对涉及 CFD 和物理仿真的开发者同样不可忽视。",
+      "path": "/reports/2026/09/09-morning.md",
+      "sourceCount": 23
+    },
     {
       "date": "2026-09-08",
       "edition": "health",
