@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-09-13T12:29:29.788Z",
+  "generatedAt": "2026-09-14T00:30:50.422Z",
   "entries": [
+    {
+      "date": "2026-09-14",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-09-14",
+      "lede": "",
+      "takeaway": "本期要闻围绕 AI Agent 的工程化落地与风险管控展开两条主线：一方面，Perplexity 与 Figma 分别展示了 AI Agent 在端到端生产系统和安全运营中的自主执行能力，表明 Agent 正从辅助角色迈向自主操作阶段；另一方面，Anthropic 警告与\"Read, Don't Write\"评测范式则提示业界，在加速部署的同时需同步建立信任护栏与可进化的评估体系，以应对可控性、审计追溯与能力边界等新挑战。",
+      "path": "/reports/2026/09/14-morning.md",
+      "sourceCount": 10
+    },
     {
       "date": "2026-09-13",
       "edition": "morning",
