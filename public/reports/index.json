@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-09-14T12:29:29.620Z",
+  "generatedAt": "2026-09-15T00:31:18.310Z",
   "entries": [
+    {
+      "date": "2026-09-15",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-09-15",
+      "lede": "",
+      "takeaway": "本期要闻围绕 AI 工具的工程化落地与垂直场景拓展：Anthropic 同时分享了 Agentic 编码下 CI 测试影响分析的扩容实践，以及面向金融顾问的 Claude 垂直版本，反映大模型在专业服务与企业级市场的持续渗透。开发者层面，Claude Code v2.1.271 在远程会话和交互体验上的改进，与 Apple 全平台 27.0 系统更新共同提示开发者关注新 API 适配与隐私合规调整。",
+      "path": "/reports/2026/09/15-morning.md",
+      "sourceCount": 17
+    },
     {
       "date": "2026-09-14",
       "edition": "morning",
