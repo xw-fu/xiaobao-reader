@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-09-15T12:29:50.210Z",
+  "generatedAt": "2026-09-16T00:30:54.124Z",
   "entries": [
+    {
+      "date": "2026-09-16",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-09-16",
+      "lede": "",
+      "takeaway": "本期要闻呈现两条主线：一方面，AI 工具正加速向企业核心业务渗透，Anthropic 将 Claude 对接 Salesforce 以打通 CRM 数据，并公开 AI 原生营收组织的搭建方法，为企业落地 AI 代理与团队重构提供参考；另一方面，苹果在换帅后首次完整发布新品，包括 iPhone 18 Pro 与首款折叠设备 iPhone Duo，硬件形态变化为开发者带来新的适配窗口。与此同时，Claude Code 在网关可观测性与 MCP 稳定性方面的更新，则为企业级 AI 部署的审计与运维补齐了基础设施层面的拼图。",
+      "path": "/reports/2026/09/16-morning.md",
+      "sourceCount": 18
+    },
     {
       "date": "2026-09-15",
       "edition": "morning",
