@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-09-16T12:29:27.347Z",
+  "generatedAt": "2026-09-17T00:30:54.325Z",
   "entries": [
+    {
+      "date": "2026-09-17",
+      "edition": "morning",
+      "title": "晓报 · 早报 — 2026-09-17",
+      "lede": "",
+      "takeaway": "本期要闻聚焦 AI 智能体对产品形态的重塑：Anthropic 将对话与协作能力整合为统一入口，Salesforce 则以 Agent 替代传统 UI，两者共同指向\"一体化智能体\"正在成为新的交互范式。与此同时，Java 生态通过 Simple JSON API 标准化与 LangChain4j 升级，为传统企业接入 AI 能力提供更稳固的基础设施。开发者层面，Claude Code 新增的内存告警与 MCP 超时配置，则直接回应了长会话稳定性与多工具编排中的实际痛点。",
+      "path": "/reports/2026/09/17-morning.md",
+      "sourceCount": 23
+    },
     {
       "date": "2026-09-16",
       "edition": "morning",
