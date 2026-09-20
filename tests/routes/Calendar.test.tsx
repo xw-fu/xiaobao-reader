@@ -20,7 +20,7 @@ const MANIFEST = {
     {
       date: "2026-05-19",
       edition: "morning",
-      title: "晓报 · 早报 — 2026-05-19",
+      title: "晓报 · 要闻 — 2026-05-19",
       takeaway: "今日要点示例",
       path: "/reports/2026/05/19-morning.md",
       sourceCount: 7,
@@ -28,7 +28,7 @@ const MANIFEST = {
     {
       date: "2026-05-15",
       edition: "morning",
-      title: "晓报 · 早报 — 2026-05-15",
+      title: "晓报 · 要闻 — 2026-05-15",
       takeaway: "另一日",
       path: "/reports/2026/05/15-morning.md",
       sourceCount: 3,
@@ -71,6 +71,6 @@ describe("Calendar route", () => {
     renderApp("/");
     const cell = await screen.findByRole("button", { name: /2026年5月19日/ });
     await user.click(cell);
-    expect(await screen.findByText("晓报 · 早报 — 2026-05-19")).toBeInTheDocument();
+    expect(await screen.findByText("晓报 · 要闻 — 2026-05-19")).toBeInTheDocument();
   });
 });

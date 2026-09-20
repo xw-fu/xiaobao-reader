@@ -14,7 +14,7 @@ afterEach(() => {
   rmSync(tmpRoot, { recursive: true, force: true });
 });
 
-const SAMPLE_NO_LEDE = `# 晓报 · 早报 — 2026-06-01
+const SAMPLE_NO_LEDE = `# 晓报 · 要闻 — 2026-06-01
 
 *早安！*
 
@@ -32,7 +32,7 @@ const SAMPLE_NO_LEDE = `# 晓报 · 早报 — 2026-06-01
 - 影响：y
 `;
 
-const SAMPLE_HAS_LEDE = `# 晓报 · 早报 — 2026-06-02
+const SAMPLE_HAS_LEDE = `# 晓报 · 要闻 — 2026-06-02
 
 *早安！*
 
@@ -86,7 +86,7 @@ describe("backfillLede", () => {
 
   it("trims the lede at the nearest comma when the first sentence is over 40 chars", () => {
     mkdirSync(join(tmpRoot, "2026/06"), { recursive: true });
-    const long = `# 晓报 · 早报 — 2026-06-03
+    const long = `# 晓报 · 要闻 — 2026-06-03
 
 *早安！*
 
@@ -118,7 +118,7 @@ describe("backfillLede", () => {
   it("strips leaked <think>...</think> blocks before deriving the lede", () => {
     mkdirSync(join(tmpRoot, "2026/06"), { recursive: true });
     const src = [
-      "# 晓报 · 早报 — 2026-06-23",
+      "# 晓报 · 要闻 — 2026-06-23",
       "",
       "*晚安！*",
       "",

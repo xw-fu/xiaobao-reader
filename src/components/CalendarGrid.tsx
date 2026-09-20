@@ -147,9 +147,9 @@ export function CalendarGrid({ entries }: Props) {
       </div>
 
       <div className={styles.legend}>
-        <span className={styles.legendItem}><span className={`${styles.dot} ${styles.dotMorning} ${styles.dotLg}`} /> 早报</span>
-        <span className={styles.legendItem}><span className={`${styles.dot} ${styles.dotEvening} ${styles.dotLg}`} /> 晚报</span>
-        <span className={styles.legendItem}><span className={`${styles.dot} ${styles.dotHealth} ${styles.dotLg}`} /> 午报</span>
+        <span className={styles.legendItem}><span className={`${styles.dot} ${styles.dotMorning} ${styles.dotLg}`} /> 要闻</span>
+        <span className={styles.legendItem}><span className={`${styles.dot} ${styles.dotEvening} ${styles.dotLg}`} /> 盘点</span>
+        <span className={styles.legendItem}><span className={`${styles.dot} ${styles.dotHealth} ${styles.dotLg}`} /> 健康</span>
         <span className={styles.legendItem}><span className={styles.legendToday} /> 今日</span>
       </div>
     </div>

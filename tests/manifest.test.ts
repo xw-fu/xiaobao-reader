@@ -13,7 +13,7 @@ describe("loadManifest", () => {
             {
               date: "2026-05-19",
               edition: "morning",
-              title: "晓报 · 早报 — 2026-05-19",
+              title: "晓报 · 要闻 — 2026-05-19",
               takeaway: "x",
               path: "/reports/2026/05/19-morning.md",
               sourceCount: 7,
@@ -37,7 +37,7 @@ describe("loadManifest", () => {
     await expect(loadManifest()).rejects.toThrowError(/entries/);
   });
 
-  it("accepts a 午报 (health) entry alongside morning/evening", async () => {
+  it("accepts a 健康 (health) entry alongside morning/evening", async () => {
     // Regression: 2026-06-27 — runtime guard isEdition() only matched morning/evening,
     // so health entries from index.json caused the whole manifest to fail to load,
     // breaking the reader even though the index build was correct.
@@ -71,7 +71,7 @@ describe("loadManifest", () => {
         }),
       ),
     );
-    await expect(loadManifest()).rejects.toThrowError(/edition must be "morning" or "evening" or "health"/);
+    await expect(loadManifest()).rejects.toThrowError(/edition must be one of morning \| evening \| health \| health_weekly/);
   });
 
   it("stores empty string when entry omits the lede field", async () => {
@@ -83,7 +83,7 @@ describe("loadManifest", () => {
             {
               date: "2026-05-19",
               edition: "morning",
-              title: "晓报 · 早报 — 2026-05-19",
+              title: "晓报 · 要闻 — 2026-05-19",
               takeaway: "x",
               path: "/reports/2026/05/19-morning.md",
               sourceCount: 1,

@@ -7,8 +7,10 @@ export class ManifestLoadError extends Error {
   }
 }
 
+const EDITION_VALUES = ["morning", "evening", "health", "health_weekly"] as const;
+
 function isEdition(v: unknown): v is Edition {
-  return v === "morning" || v === "evening" || v === "health";
+  return typeof v === "string" && (EDITION_VALUES as readonly string[]).includes(v);
 }
 
 function validateEntry(raw: unknown, idx: number): ManifestEntry {
@@ -19,7 +21,7 @@ function validateEntry(raw: unknown, idx: number): ManifestEntry {
   for (const k of ["date", "title", "takeaway", "path"]) {
     if (typeof o[k] !== "string") throw new ManifestLoadError(`entries[${idx}].${k} is not a string`);
   }
-  if (!isEdition(o.edition)) throw new ManifestLoadError(`entries[${idx}].edition must be "morning" or "evening" or "health"`);
+  if (!isEdition(o.edition)) throw new ManifestLoadError(`entries[${idx}].edition must be one of ${EDITION_VALUES.join(" | ")}`);
   if (typeof o.sourceCount !== "number") throw new ManifestLoadError(`entries[${idx}].sourceCount is not a number`);
   return {
     date: o.date as string,

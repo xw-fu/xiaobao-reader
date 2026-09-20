@@ -9,18 +9,18 @@ const health = readFileSync(resolve(__dirname, "fixtures/health.md"), "utf8");
 describe("parseReport - header + takeaway", () => {
   it("extracts the title, date, and edition from the H1", () => {
     const r = parseReport(golden, "/reports/2026/05/19-morning.md");
-    expect(r.meta.title).toBe("晓报 · 早报 — 2026-05-19");
+    expect(r.meta.title).toBe("晓报 · 要闻 — 2026-05-19");
     expect(r.meta.date).toBe("2026-05-19");
     expect(r.meta.edition).toBe("morning");
     expect(r.meta.path).toBe("/reports/2026/05/19-morning.md");
   });
 
-  it("maps 午报 title to health edition", () => {
-    // The health edition (晓报 · 午报) was added in Wave 6 but the parser's
+  it("maps 健康 title to health edition", () => {
+    // The health edition (晓报 · 健康) was added in Wave 6 but the parser's
     // EDITION_WORDS table never grew to include it — so health reports
     // were silently dropped from the reader index.
     const r = parseReport(health, "/reports/2026/05/19-health.md");
-    expect(r.meta.title).toBe("晓报 · 午报 — 2026-05-19");
+    expect(r.meta.title).toBe("晓报 · 健康 — 2026-05-19");
     expect(r.meta.date).toBe("2026-05-19");
     expect(r.meta.edition).toBe("health");
   });
@@ -111,7 +111,7 @@ describe("parseManifestEntry", () => {
     expect(e).toEqual({
       date: "2026-05-19",
       edition: "morning",
-      title: "晓报 · 早报 — 2026-05-19",
+      title: "晓报 · 要闻 — 2026-05-19",
       lede: "",
       takeaway: expect.stringContaining("盖洛普民调"),
       path: "/reports/2026/05/19-morning.md",
@@ -125,7 +125,7 @@ function loadFixture(name: string): string {
 }
 
 describe("parseReport - edge cases", () => {
-  it("recognizes 晚报 as evening edition", () => {
+  it("recognizes 盘点 as evening edition", () => {
     const r = parseReport(loadFixture("evening.md"), "/reports/2026/05/19-evening.md");
     expect(r.meta.edition).toBe("evening");
   });
@@ -183,7 +183,7 @@ describe("parseLede", () => {
 
   it("stops the ## 概要 block at the funnel marker", () => {
     const src = [
-      "# 晓报 · 早报 — 2026-05-19",
+      "# 晓报 · 要闻 — 2026-05-19",
       "",
       "## 概要",
       "",
@@ -212,7 +212,7 @@ describe("parseLede", () => {
 
   it("returns empty string when ## 概要 block has only whitespace", () => {
     const src = [
-      "# 晓报 · 早报 — 2026-05-19",
+      "# 晓报 · 要闻 — 2026-05-19",
       "",
       "## 概要",
       "",
@@ -232,7 +232,7 @@ describe("parseLede", () => {
 
   it("joins multi-line ## 概要 text with a single space", () => {
     const src = [
-      "# 晓报 · 早报 — 2026-05-19",
+      "# 晓报 · 要闻 — 2026-05-19",
       "",
       "## 概要",
       "",

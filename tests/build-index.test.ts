@@ -40,7 +40,7 @@ describe("buildIndex", () => {
     // Simulates the "no ## heading" case from 2026-06-01 evening report.
     // buildIndex must not throw — it should log and continue so that other
     // reports still get indexed.
-    const broken = "# 晓报 · 晚报 — 2026-06-01\n\n*晚安！*\n\n*今日暂无新闻更新。*\n";
+    const broken = "# 晓报 · 盘点 — 2026-06-01\n\n*晚安！*\n\n*今日暂无新闻更新。*\n";
     writeFileSync(join(publicReports, "2026", "05", "broken.md"), broken);
 
     const manifest = buildIndex(publicReports);
@@ -71,9 +71,9 @@ describe("buildIndex", () => {
     expect(manifest.entries[1].edition).toBe("morning");
   });
 
-  it("includes a 午报 (health) report alongside morning/evening of the same date", () => {
+  it("includes a 健康 (health) report alongside morning/evening of the same date", () => {
     // Regression: 2026-06-26 — health cron published to disk but the reader
-    // never showed it because the parser silently skipped 午报.
+    // never showed it because the parser silently skipped 健康.
     writeFileSync(join(publicReports, "2026", "05", "19-health.md"), health);
     buildIndex(publicReports);
     const manifest = JSON.parse(readFileSync(join(publicReports, "index.json"), "utf8"));
@@ -82,7 +82,7 @@ describe("buildIndex", () => {
     expect(paths).toContain("/reports/2026/05/19-health.md");
     const healthEntry = manifest.entries.find((e: { edition: string }) => e.edition === "health");
     expect(healthEntry).toBeDefined();
-    expect(healthEntry.title).toBe("晓报 · 午报 — 2026-05-19");
+    expect(healthEntry.title).toBe("晓报 · 健康 — 2026-05-19");
   });
 
   it("orders same-date entries: evening, morning, health (noon sits at the end)", () => {

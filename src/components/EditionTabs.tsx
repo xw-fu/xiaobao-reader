@@ -7,7 +7,7 @@ interface Props {
   onChange: (e: Edition) => void;
 }
 
-const LABEL: Record<Edition, string> = { morning: "早报", evening: "晚报", health: "午报" };
+const LABEL: Record<Edition, string> = { morning: "要闻", evening: "盘点", health: "健康", health_weekly: "回顾" };
 
 export function EditionTabs({ available, active, onChange }: Props) {
   if (available.length <= 1) return null;

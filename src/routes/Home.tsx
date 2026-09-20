@@ -3,7 +3,7 @@ import { useManifest } from "../data/ManifestContext";
 import type { ManifestEntry } from "../types";
 import styles from "./Home.module.css";
 
-const EDITION_LABEL = { morning: "早报", evening: "晚报", health: "午报" } as const;
+const EDITION_LABEL = { morning: "要闻", evening: "盘点", health: "健康", health_weekly: "回顾" } as const;
 
 const EDITION_KICKER_CLASS: Record<ManifestEntry["edition"], string> = {
   morning: styles.kMorning,

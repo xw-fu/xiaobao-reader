@@ -2,7 +2,16 @@ import type { Edition, Report, ManifestEntry, ReportSection, ReportItem } from "
 import { ReportParseError } from "../types";
 
 const HEADER_RE = /^# (.+?) — (\d{4}-\d{2}-\d{2})\s*$/;
-const EDITION_WORDS: Record<string, Edition> = { "早报": "morning", "晚报": "evening", "午报": "health" };
+// Maps title keywords to Edition codes. Keep in sync with the producer's
+// EDITION_DISPLAY badge_label values (xiaobao/scripts/constants.py).
+// New editions are added to the producer first; this map must mirror them so
+// the reader doesn't silently drop new reports.
+const EDITION_WORDS: Record<string, Edition> = {
+  "要闻": "morning",
+  "盘点": "evening",
+  "健康": "health",
+  "回顾": "health_weekly",
+};
 const FUNNEL_MARKER = "**数据漏斗 · Funnel**";
 const ITEM_TITLE_RE = /^- \*\*(.+?)\*\*\s*$/;
 const ITEM_META_RE = /^- 📍\s*(.+?)\s*·\s*(.+?)\s*·\s*\[原文\]\((.+?)\)\s*$/;
@@ -32,7 +41,7 @@ function parseHeader(lines: string[]): { title: string; date: string; edition: E
   for (const [word, ed] of Object.entries(EDITION_WORDS)) {
     if (m[1].includes(word)) { edition = ed; break; }
   }
-  if (!edition) throw new ReportParseError("header", idx + 1, `no edition word (早报/晚报/午报) in title: ${m[1]}`);
+  if (!edition) throw new ReportParseError("header", idx + 1, `no edition word (要闻/盘点/健康/回顾) in title: ${m[1]}`);
   return { title, date, edition };
 }
 

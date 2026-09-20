@@ -14,7 +14,7 @@ const MANIFEST = {
     {
       date: "2026-05-19",
       edition: "morning",
-      title: "晓报 · 早报 — 2026-05-19",
+      title: "晓报 · 要闻 — 2026-05-19",
       takeaway: "盖洛普民调显示，美国人反对AI数据中心",
       path: "/reports/2026/05/19-morning.md",
       sourceCount: 7,
@@ -22,7 +22,7 @@ const MANIFEST = {
     {
       date: "2026-05-18",
       edition: "morning",
-      title: "晓报 · 早报 — 2026-05-18",
+      title: "晓报 · 要闻 — 2026-05-18",
       takeaway: "Claude 发布新版本",
       path: "/reports/2026/05/18-morning.md",
       sourceCount: 5,

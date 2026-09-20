@@ -18,7 +18,7 @@ const MANIFEST = {
     {
       date: "2026-05-19",
       edition: "morning",
-      title: "晓报 · 早报 — 2026-05-19",
+      title: "晓报 · 要闻 — 2026-05-19",
       takeaway: "今日要点示例",
       path: "/reports/2026/05/19-morning.md",
       sourceCount: 7,
@@ -50,7 +50,7 @@ describe("Report route", () => {
   it("fetches and renders the report markdown", async () => {
     server.use(http.get("/reports/2026/05/19-morning.md", () => HttpResponse.text(golden)));
     renderAt("/r/2026-05-19");
-    expect(await screen.findByText("晓报 · 早报 — 2026-05-19")).toBeInTheDocument();
+    expect(await screen.findByText("晓报 · 要闻 — 2026-05-19")).toBeInTheDocument();
     expect(await screen.findByText(/AI 前沿/)).toBeInTheDocument();
     const matches = screen.getAllByText("The AI trial of the century ends with a whimper");
     expect(matches.length).toBeGreaterThan(0);
