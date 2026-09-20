@@ -2,6 +2,7 @@ import { describe, it, expect } from "vitest";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { parseReport, parseManifestEntry } from "../src/data/parser";
+import type { Edition } from "../src/types";
 
 const golden = readFileSync(resolve(__dirname, "fixtures/golden.md"), "utf8");
 const health = readFileSync(resolve(__dirname, "fixtures/health.md"), "utf8");
@@ -128,6 +129,26 @@ describe("parseReport - edge cases", () => {
   it("recognizes 盘点 as evening edition", () => {
     const r = parseReport(loadFixture("evening.md"), "/reports/2026/05/19-evening.md");
     expect(r.meta.edition).toBe("evening");
+  });
+
+  it("recognizes legacy 早报/晚报/午报/周报 keywords (backward compat)", () => {
+    // The 248 historical reports under public/reports/ still use the pre-2026-09-20
+    // time-of-day keywords (晓报 · 早报 — <date>, etc.). The parser must keep loading
+    // them into the index until they're migrated — see EDITION_WORDS comment.
+    const footer = "\n*模型：test · 条目：1 · 过滤：0 · 治理：0 · AI/规则enriched：0/1 · 生成时间：2026-09-20T00:00:00+08:00*\n";
+    const cases: Array<[string, Edition]> = [
+      ["# 晓报 · 早报 — 2026-05-19", "morning"],
+      ["# 晓报 · 晚报 — 2026-05-19", "evening"],
+      ["# 晓报 · 午报 — 2026-06-22", "health"],
+      ["# 晓报 · 周报 — 2026-06-28", "health_weekly"],
+    ];
+    for (const [h1, expected] of cases) {
+      const r = parseReport(
+        `${h1}\n\n## 今日要点\n\nplaceholder.\n\n## AI 前沿\n${footer}`,
+        "/reports/x.md",
+      );
+      expect(r.meta.edition).toBe(expected);
+    }
   });
 
   it("preserves raw inline markdown in what/soWhat (rendering is downstream)", () => {

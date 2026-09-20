@@ -6,11 +6,24 @@ const HEADER_RE = /^# (.+?) — (\d{4}-\d{2}-\d{2})\s*$/;
 // EDITION_DISPLAY badge_label values (xiaobao/scripts/constants.py).
 // New editions are added to the producer first; this map must mirror them so
 // the reader doesn't silently drop new reports.
+//
+// DEPRECATED ENTRIES (legacy): 早报/晚报/午报/周报 were the pre-2026-09-20
+// time-of-day keywords. Kept here so the 248+ historical reports already
+// committed to public/reports/ keep loading into the reader index. New
+// reports must use the theme keywords (要闻/盘点/健康/回顾); these legacy
+// entries can be removed once public/reports/<date>/*.md no longer contains
+// them (tracked in references/reader-edition-migration.md).
 const EDITION_WORDS: Record<string, Edition> = {
+  // theme keywords (current — producer writes these)
   "要闻": "morning",
   "盘点": "evening",
   "健康": "health",
   "回顾": "health_weekly",
+  // legacy keywords (deprecated — keep for backward compatibility only)
+  "早报": "morning",
+  "晚报": "evening",
+  "午报": "health",
+  "周报": "health_weekly",
 };
 const FUNNEL_MARKER = "**数据漏斗 · Funnel**";
 const ITEM_TITLE_RE = /^- \*\*(.+?)\*\*\s*$/;
@@ -41,7 +54,7 @@ function parseHeader(lines: string[]): { title: string; date: string; edition: E
   for (const [word, ed] of Object.entries(EDITION_WORDS)) {
     if (m[1].includes(word)) { edition = ed; break; }
   }
-  if (!edition) throw new ReportParseError("header", idx + 1, `no edition word (要闻/盘点/健康/回顾) in title: ${m[1]}`);
+  if (!edition) throw new ReportParseError("header", idx + 1, `no edition word (要闻/盘点/健康/回顾 or legacy 早报/晚报/午报/周报) in title: ${m[1]}`);
   return { title, date, edition };
 }
 
