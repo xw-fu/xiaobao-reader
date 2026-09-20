@@ -11,7 +11,7 @@ function pickEntries(entries: ManifestEntry[], date: string): ManifestEntry[] {
   return entries.filter((e) => e.date === date);
 }
 
-const EDITION_PRIORITY: Record<Edition, number> = { morning: 0, evening: 1, health: 2 };
+const EDITION_PRIORITY: Record<Edition, number> = { morning: 0, evening: 1, health: 2, health_weekly: 3 };
 
 function pickActive(entriesForDate: ManifestEntry[], requested?: string): ManifestEntry | null {
   if (entriesForDate.length === 0) return null;

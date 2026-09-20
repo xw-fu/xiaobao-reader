@@ -33,8 +33,8 @@ export function buildIndex(reportsDir: string): Manifest {
     }
   }
   // Sort: date desc, then within the same date show evening → morning → health
-  // (noon edition rounds out the day after morning + evening).
-  const EDITION_ORDER: Record<Edition, number> = { evening: 0, morning: 1, health: 2 };
+  // → health_weekly (weekly digest rounds out the day after the daily editions).
+  const EDITION_ORDER: Record<Edition, number> = { evening: 0, morning: 1, health: 2, health_weekly: 3 };
   entries.sort((a, b) => {
     if (a.date !== b.date) return b.date.localeCompare(a.date);
     return EDITION_ORDER[a.edition] - EDITION_ORDER[b.edition];

@@ -9,6 +9,7 @@ const EDITION_KICKER_CLASS: Record<ManifestEntry["edition"], string> = {
   morning: styles.kMorning,
   evening: styles.kEvening,
   health: styles.kHealth,
+  health_weekly: styles.kHealthWeekly,
 };
 const WEEKDAYS = ["日", "一", "二", "三", "四", "五", "六"];
 

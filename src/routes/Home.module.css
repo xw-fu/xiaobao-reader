@@ -155,6 +155,10 @@
   color: var(--tertiary);
   background: var(--tertiary-bg);
 }
+.kHealthWeekly {
+  color: var(--tertiary-bright);
+  background: var(--tertiary-bg);
+}
 .rowTitle {
   display: -webkit-box;
   -webkit-line-clamp: 2;
