@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T00:31:33.513Z",
+  "generatedAt": "2026-09-24T12:29:40.685Z",
   "entries": [
     {
       "date": "2026-09-24",
@@ -9,6 +9,15 @@
       "takeaway": "今日要闻聚焦两大主线：一方面，Anthropic 在 Claude 生态与 AI 工程化方向持续发力，从 Marketplace 集成主流数据与部署平台，到发布代码现代化方法论，帮助企业缩短 AI 应用从原型到规模化的距离；另一方面，苹果动态横跨当下合规与历史档案——欧盟 ATT 政策更新对依赖广告归因的业务提出新的合规要求，而完整公开的 iPhone 4 天线门问答则提供了产品危机公关的历史镜鉴。综合来看，技术团队既要把握 AI 落地工具链的演进，也需关注监管与历史经验对当下实践的启示。",
       "path": "/reports/2026/09/24-morning.md",
       "sourceCount": 22
+    },
+    {
+      "date": "2026-09-24",
+      "edition": "health",
+      "title": "晓报 · 健康 — 2026-09-24",
+      "lede": "",
+      "takeaway": "本期速览聚焦可穿戴硬件与数字诊疗两条主线：一方面，Meta 轻量化、低价 AR 眼镜的推出与苹果 Face ID、eSIM 等生态故障相互对照，凸显消费级硬件向医疗健康场景延伸时，对生物认证可靠性、蜂窝网络冗余与传感精度的更高要求；另一方面，FDA 顾问委员会对 GRAIL 多癌种早筛产品的背书，以及围绕成瘾机制中\"细胞能量开关\"的基础研究进展，共同提示多组学早筛与神经环路干预正从概念走向监管评估，产业下一阶段的竞争将集中在临床路径设计、保险支付衔接与数据可信度建设。 Cellular 'energetic switch' could help separate drug rewards from natural pleasure",
+      "path": "/reports/2026/09/24-health.md",
+      "sourceCount": 16
     },
     {
       "date": "2026-09-23",
