@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-09-24T12:29:40.685Z",
+  "generatedAt": "2026-09-25T00:30:54.273Z",
   "entries": [
+    {
+      "date": "2026-09-25",
+      "edition": "morning",
+      "title": "晓报 · 要闻 — 2026-09-25",
+      "lede": "",
+      "takeaway": "本期要闻聚焦两大主线：一是 Anthropic 持续加码开发者场景，Claude 频道引入个人连接器、Opus 5.5 面向长会话与大上下文编码场景进行专项优化，推动 AI 编码工具向复杂工程任务延伸；二是 Meta 通过 Muse 可爱化路线与 Zuckerberg 专访，勾勒出以消费级体验、开源模型和 AI 硬件为核心的差异化战略。与此同时，评测（Evals）成为行业新热点，标志着 AI 开发正从模型驱动走向评测驱动的新阶段，值得技术团队在选型与迭代流程中提前布局。",
+      "path": "/reports/2026/09/25-morning.md",
+      "sourceCount": 19
+    },
     {
       "date": "2026-09-24",
       "edition": "morning",
