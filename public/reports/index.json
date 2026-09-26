@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-09-25T12:29:27.217Z",
+  "generatedAt": "2026-09-26T00:31:29.431Z",
   "entries": [
+    {
+      "date": "2026-09-26",
+      "edition": "morning",
+      "title": "晓报 · 要闻 — 2026-09-26",
+      "lede": "",
+      "takeaway": "本期新闻共同指向一个核心议题：AI Agent 与平台生态的演进，以及用户与开发者对控制权和设计边界的持续关注。Anthropic 为 Claude 推出插件机制，使其向可编程 Agent 平台迈进，而知名评论者对 AI 访问个人数据的谨慎态度，则凸显出权限设计与隐私透明化在 Agent 落地过程中的关键作用。同一时段，围绕 macOS 原生 UI 设计的讨论出现代际更替的信号，开发者社区在界面适配与设计共识上面临重新校准。",
+      "path": "/reports/2026/09/26-morning.md",
+      "sourceCount": 17
+    },
     {
       "date": "2026-09-25",
       "edition": "morning",
