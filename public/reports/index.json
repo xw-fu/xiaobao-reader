@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-09-28T12:29:32.800Z",
+  "generatedAt": "2026-09-29T00:30:36.914Z",
   "entries": [
+    {
+      "date": "2026-09-29",
+      "edition": "morning",
+      "title": "晓报 · 要闻 — 2026-09-29",
+      "lede": "",
+      "takeaway": "今天要闻的核心议题集中在 AI 智能体的企业落地与平台生态治理两大方向：Anthropic 与 NVIDIA 联手为生产环境的 Claude 智能体引入更细粒度的行为与权限控制，Claude Code 也将百万 token 上下文设为默认模型，从基础设施到开发工具同步推进可控、可扩展的代理化工作流。与此同时，Meta 在 AI 战略上的激进押注、苹果秋季发布节奏的预测，以及 Mac App Store 山寨应用泛滥的讨论，分别从大厂方向、生态适配和安全治理等角度，勾勒出技术从业者近期需要权衡的格局变化。",
+      "path": "/reports/2026/09/29-morning.md",
+      "sourceCount": 17
+    },
     {
       "date": "2026-09-28",
       "edition": "morning",
