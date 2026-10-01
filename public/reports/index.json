@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-09-30T12:29:23.055Z",
+  "generatedAt": "2026-10-01T00:31:46.000Z",
   "entries": [
+    {
+      "date": "2026-10-01",
+      "edition": "morning",
+      "title": "晓报 · 要闻 — 2026-10-01",
+      "lede": "",
+      "takeaway": "本期要闻聚焦 Anthropic 的密集动作：面向政府客户开放 Claude、销售团队以 AI 代理重构入站流程，以及首次披露的 IPO 招股书所揭示的算力与商业化压力，反映前沿 AI 公司在政企落地与资本市场的双重推进。与此同时，苹果宣布将于 10 月 13 日进军智能家居赛道，意在挑战现有由 Alexa、Google Home 主导的格局，值得开发者提前布局生态对接。",
+      "path": "/reports/2026/10/01-morning.md",
+      "sourceCount": 17
+    },
     {
       "date": "2026-09-30",
       "edition": "morning",
