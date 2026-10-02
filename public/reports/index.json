@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-10-01T12:30:36.797Z",
+  "generatedAt": "2026-10-02T00:31:08.377Z",
   "entries": [
+    {
+      "date": "2026-10-02",
+      "edition": "morning",
+      "title": "晓报 · 要闻 — 2026-10-02",
+      "lede": "",
+      "takeaway": "本期要闻围绕 AI 工具的可扩展边界与行业落地两条主线展开：Claude Code 通过 Mods 机制首次允许插件深度修改行为，并内置智能体监控以减少幻觉与遗漏，显著提升了编码助手的可定制性与可靠性；与此同时，OpenAI 提出 AI 核心价值在于支撑突破性想法背后的常规执行工作，Albertsons 则将 ChatGPT Enterprise 深度嵌入零售全流程，为传统行业的大模型落地提供了端到端参考。综合来看，AI 正从能力展示阶段迈入执行层深度嵌入与场景化定制的新阶段。",
+      "path": "/reports/2026/10/02-morning.md",
+      "sourceCount": 15
+    },
     {
       "date": "2026-10-01",
       "edition": "morning",
