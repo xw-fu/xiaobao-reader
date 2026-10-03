@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-10-02T12:29:45.754Z",
+  "generatedAt": "2026-10-03T00:30:19.420Z",
   "entries": [
+    {
+      "date": "2026-10-03",
+      "edition": "morning",
+      "title": "晓报 · 要闻 — 2026-10-03",
+      "lede": "",
+      "takeaway": "本期要闻围绕 AI 工具链的权限治理与平台策略展开：Apple 收紧 macOS 完全磁盘访问权限以约束 Agentic AI 应用的系统级调用，Claude Code 通过选区 API 和内置 GitHub CLI 进一步强化终端编程场景的自动化能力，OpenAI 推出 GPT-6 系列的官方实践指南为生产环境选型与调优提供参照。与此同时，Stratechery 解读了 Meta 与 OpenAI 的战略博弈，而 Zig 创始人明确禁止 AI 贡献并将仓库迁出 GitHub，折射出开源社区对 AI 生成代码与平台依赖的态度分化。对开发者而言，如何在更严格的权限约束与平台变迁中重新设计工具链与协作流程，是本周最值得追踪的线索。",
+      "path": "/reports/2026/10/03-morning.md",
+      "sourceCount": 12
+    },
     {
       "date": "2026-10-02",
       "edition": "morning",
