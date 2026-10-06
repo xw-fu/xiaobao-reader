@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-10-05T12:29:42.435Z",
+  "generatedAt": "2026-10-06T00:30:41.151Z",
   "entries": [
+    {
+      "date": "2026-10-06",
+      "edition": "morning",
+      "title": "晓报 · 要闻 — 2026-10-06",
+      "lede": "",
+      "takeaway": "本期聚焦两大主线：AI Agent 生态正加速走向平台化，Claude Agent SDK 与 Claude Code 的相关更新降低了企业搭建多智能体工作流的门槛，同时欧盟文本溯源规则进入落地阶段，OpenAI 公开水印方案预示生成内容标识要求将逐步收紧；出海产品与内容平台需提前布局合规检测能力，技术团队则应关注 Agent 框架的可观测性与权限治理。",
+      "path": "/reports/2026/10/06-morning.md",
+      "sourceCount": 12
+    },
     {
       "date": "2026-10-05",
       "edition": "morning",
