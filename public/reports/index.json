@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-11-01T12:28:56.174Z",
+  "generatedAt": "2026-11-02T00:30:39.890Z",
   "entries": [
+    {
+      "date": "2026-11-02",
+      "edition": "morning",
+      "title": "晓报 · 要闻 — 2026-11-02",
+      "lede": "",
+      "takeaway": "本期要闻聚焦人工智能从模型能力走向工程化落地：SQL查询与动态表增量刷新通过复用既有结果，显著改善数据处理延迟和成本；Snowflake CoCo则推动AI技能在团队内共享与治理。另一项进展让AI代理无需浏览器即可注册并接入应用，但身份授权、权限边界和滥用防护仍需同步建设。",
+      "path": "/reports/2026/11/02-morning.md",
+      "sourceCount": 7
+    },
     {
       "date": "2026-11-01",
       "edition": "morning",
