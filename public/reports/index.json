@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-11-03T12:31:21.767Z",
+  "generatedAt": "2026-11-04T00:31:59.350Z",
   "entries": [
+    {
+      "date": "2026-11-04",
+      "edition": "morning",
+      "title": "晓报 · 要闻 — 2026-11-04",
+      "lede": "",
+      "takeaway": "本期要闻集中于人工智能能力扩展与治理：OpenAI提高安全漏洞奖励，Claude Code增强权限、成本和模型配置审计，Apple则开放Siri人工智能接口供开发者接入。围绕新版本工具与设备适配，Safari加入垂直标签页和自适应深色模式，新款iPad mini的性能、续航与便携性评测也将影响开发部署和用户选购。",
+      "path": "/reports/2026/11/04-morning.md",
+      "sourceCount": 23
+    },
     {
       "date": "2026-11-03",
       "edition": "morning",
